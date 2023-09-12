@@ -62,6 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 });
 
+// Getting references to HTML elements for later manipulation.
+
+const board = document.getElementById('game-board');
+const newMatch = document.getElementById('new-match');
+const wrongMatch = document.getElementById('wrong-match');
+
+// button, start and restart
+
+const startGame = document.getElementById('start-game');
+const restartGame = document.getElementById('restart-game');
+
+
 
 
 //All function for use on Memory game
@@ -72,11 +84,14 @@ function startGame() {
 
 function createBoard() {
 
+
 }
 
 function shuffleCards() {
 
 }
+
+
 
 function flipCards() {
 

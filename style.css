@@ -1,7 +1,19 @@
+/* Removing default margins, paddings and borders */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
 #header {
     background-color: blueviolet;
     width: 100%;
     height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 #game-board {
@@ -16,10 +28,20 @@
     background-color: green;
     width: 100%;
     height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
     background-color: blue;
     width: 100%;
     height: 50px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin: 0 0 15px 15px;
 }

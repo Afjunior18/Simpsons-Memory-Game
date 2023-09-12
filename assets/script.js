@@ -61,8 +61,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // buttons, start and restart
 
-    const startGame = document.getElementById('start-game');
+    const runGame = document.getElementById('start-game');
     const restartGame = document.getElementById('restart-game');
+
+    runGame.addEventListener('click', startGame);
+
+    // quando clicar ira iniciar o jogo, as cartao serao embaralhadas
+
+    function startGame() {
+        const shuffledCards = shuffleCards(cards);
+        createBoard();
+    }
+
+    startGame();
 
 
     // This function shuffles an array of cards.
@@ -87,11 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
     createBoard();
 
 
-    //All function for use on Memory game
+    // All function for use on Memory game
 
-    // function startGame() {
-
-    // }
 
     function flipCards() {
 

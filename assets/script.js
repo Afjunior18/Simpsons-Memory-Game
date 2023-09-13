@@ -85,10 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Array to keep track of chosen cards
     let chosenCards = [];
 
-    // buttons, start and restart
-
+    // button start game
     const runGame = document.getElementById('start-game');
-    const restartGame = document.getElementById('restart-game');
 
     runGame.addEventListener('click', startGame);
 
@@ -98,8 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function startGame() {
         const shuffledCards = shuffleCards(cards);
         createBoard(shuffledCards);
-
+        resetGame();
     }
+
     // calling the function to initiate the game
     startGame();
 
@@ -187,6 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (cards.every(card => card.matched)) {
                 alert('Congrats! You won...');
+
             }
         }
     }
@@ -197,6 +197,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function checkGameOver() {
 
+    }
+
+    function resetGame() {
+        cards.forEach(card => {
+            card.flipped = false;
+            card.matched = false;
+        });
+        chosenCards = [];
+        createBoard(cards);
     }
 
 

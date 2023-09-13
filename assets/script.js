@@ -3,77 +3,77 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const cards = [{
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false
-        }
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false
+    }
     ];
 
     // Getting references to HTML elements for later manipulation.
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     runGame.addEventListener('click', startGame);
 
     // Array to keep track of chosen cards
-    let cardsChosen = [];
+    let chosenCards = [];
 
 
     // Function to initiate the game.
@@ -108,19 +108,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function flipCard(card, cards) {
         // Check is the card is not flipped and if we have flipped less than 2 cards
-        if (!card.flipped && cardsChosen.length < 2) {
+        if (!card.flipped && chosenCards.length < 2) {
             card.flipped = true; // Mark the card as flipped
-            cardsChosen.push(card); // Add the card to flipped cards
+            chosenCards.push(card); // Add the card to flipped cards
 
-            checkMatchingCards(cards);
+            createBoard(cards);
 
-            //after chosen 2 cards, wait for 2 seconds before checking for match
-            if (cardsChosen.length === 2) {
-                createBoard(cards); // Update the board after flipping the card
-                setTimeout(checkMatchingCards, 2000, cards);
-            } else {
-                createBoard(cards);
+            //after chosen 2 cards, wait for 1 second before checking for match
+            if (chosenCards.length === 2) {
+                checkMatchingCards(cards);
             }
+        } else if (chosenCards.length === 2) {
+            const [card1, card2] = chosenCards;
+            card1.flipped = false;
+            card2.flipped = false;
+            chosenCards = [card];
+            createBoard(cards);
         }
     }
 
@@ -173,14 +176,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    function checkMatchingCards(cardsChosen) {
+    function checkMatchingCards(cards) {
 
         // const flippedCards = cards.filter(card => card.flipped);
-        if (cardsChosen.length === 2) {
-            const [card1, card2] = cardsChosen;
+        if (chosenCards.length === 2) {
+            const [card1, card2] = chosenCards;
 
             if (card1.name === card2.name) {
-
                 // Cards are match
                 card1.matched = true;
                 card2.matched = true;
@@ -190,8 +192,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 card1.flipped = false;
                 card2.flipped = false;
             }
-            cardsChosen = []; // clear the array of cards chosen.
+            cardsChosen = []; // Clear the array of cards chosen.
             createBoard(cards); // Update the Board
+
+            chosenCards = [];
+            createBoard(cards);
+
+            if (cards.every(card => card.matched)) {
+                alert('Congrats! You won...');
+            }
         }
     }
 

@@ -112,8 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const cardElement = document.createElement('div');
             const imgElement = document.createElement('img');
 
-            // Add a class to the image element for styling CSS
+            // Adds a class to the image element for styling CSS
             imgElement.classList.add('card-image');
+
+            // Adds an event listener to flip the card when clicked
+            cardElement.addEventListener('click', () => {
+                flipCard(card, cards); // calling function flipCard
+            });
 
             // Check if the card is flipped (face up) or not (face down)
             if (card.flipped) {
@@ -128,14 +133,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // This function flips a card and updates the game board
+
+    function flipCard(card, cards) {
+        if (!card.flipped) {
+            card.flipped = true;
+            createBoard(cards); // Atualiza o tabuleiro após virar a carta
+        }
+    }
+
 
 
     // All function for use on Memory game
 
 
-    function flipCards() {
-
-    }
 
     function checkMatchingCards() {
 

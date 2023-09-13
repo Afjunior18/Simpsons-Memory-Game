@@ -82,16 +82,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const newMatch = document.getElementById('new-match');
     const wrongMatch = document.getElementById('wrong-match');
 
+    // Array to keep track of chosen cards
+    let chosenCards = [];
+
     // buttons, start and restart
 
     const runGame = document.getElementById('start-game');
     const restartGame = document.getElementById('restart-game');
 
     runGame.addEventListener('click', startGame);
-
-    // Array to keep track of chosen cards
-    let chosenCards = [];
-
 
     // Function to initiate the game.
     // Shuffles the cards and creates the game board.
@@ -108,22 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function flipCard(card, cards) {
         // Check is the card is not flipped and if we have flipped less than 2 cards
-        if (!card.flipped && chosenCards.length < 2) {
+        if (chosenCards.length < 2 && !card.flipped && !card.matched) {
             card.flipped = true; // Mark the card as flipped
             chosenCards.push(card); // Add the card to flipped cards
-
             createBoard(cards);
 
             //after chosen 2 cards, wait for 1 second before checking for match
             if (chosenCards.length === 2) {
-                checkMatchingCards(cards);
+                setTimeout(checkMatchingCards, 1000, cards);
             }
-        } else if (chosenCards.length === 2) {
-            const [card1, card2] = chosenCards;
-            card1.flipped = false;
-            card2.flipped = false;
-            chosenCards = [card];
-            createBoard(cards);
         }
     }
 
@@ -175,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // All function for use on Memory game
 
 
-
     function checkMatchingCards(cards) {
 
         // const flippedCards = cards.filter(card => card.flipped);
@@ -186,17 +177,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Cards are match
                 card1.matched = true;
                 card2.matched = true;
-
             } else {
-                // unflip the cards again
                 card1.flipped = false;
                 card2.flipped = false;
             }
-            cardsChosen = []; // Clear the array of cards chosen.
-            createBoard(cards); // Update the Board
 
-            chosenCards = [];
-            createBoard(cards);
+            chosenCards = []; // Clear the array of cards chosen.
+            createBoard(cards); // Update the Board
 
             if (cards.every(card => card.matched)) {
                 alert('Congrats! You won...');

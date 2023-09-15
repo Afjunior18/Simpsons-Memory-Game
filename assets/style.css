@@ -11,7 +11,7 @@ body {
     background-image: url('images/cover-body.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 #header {
@@ -44,8 +44,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
+
+.score-timer {
+    margin-left: 29.8%;
+}
+
+div span {
+    margin-left: 30%;
+}
+
 
 footer {
     width: 100%;

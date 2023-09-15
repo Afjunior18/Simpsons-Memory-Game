@@ -2,6 +2,29 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Getting references to HTML elements for later manipulation.
+
+    const board = document.getElementById('game-board');
+    const timer = document.querySelector('.score-timer');
+    const newMatch = document.getElementById('new-match');
+    const wrongMatch = document.getElementById('wrong-match');
+    // button start a new game 
+    const runGame = document.getElementById('start-game');
+
+    // Create variable for start a timer 
+
+    let currentTime = 0;
+    let timeInterval;
+
+    // Array to keep track of chosen cards
+
+    let chosenCards = [];
+
+    // Variable to control timer if game is in progressing 
+    let gameInProgress = false;
+
+    // Array with all cards object
+
     const cards = [{
         name: 'Card01',
         img: 'assets/images/bart.webp',
@@ -76,31 +99,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     ];
 
-    // Getting references to HTML elements for later manipulation.
-
-    const board = document.getElementById('game-board');
-    const newMatch = document.getElementById('new-match');
-    const wrongMatch = document.getElementById('wrong-match');
-
-    // Array to keep track of chosen cards
-    let chosenCards = [];
-
-    // button start game
-    const runGame = document.getElementById('start-game');
-
-    runGame.addEventListener('click', startGame);
-
     // Function to initiate the game.
     // Shuffles the cards and creates the game board.
 
     function startGame() {
-        const shuffledCards = shuffleCards(cards);
-        createBoard(shuffledCards);
-        resetGame();
+        if (!gameInProgress) {
+            const shuffledCards = shuffleCards(cards);
+            createBoard(shuffledCards);
+            resetGame();
+            gameInProgress = true; // game in progressing, starting timer.
+            startTimer();
+        }
     }
 
     // calling the function to initiate the game
-    startGame();
+    // startGame();
+
+    // Add eventListener click to a start button for starting the timer
+    document.getElementById('start-game').addEventListener("click", startGame);
+
+
+    // Function to set timer
+
+    function startTimer() {
+
+        timeInterval = setInterval(updateTime, 1000);
+
+    }
+
+    function updateTime() {
+        if (gameInProgress) {
+            currentTime++;
+            timer.textContent = currentTime;
+        }
+    }
+
+    function resetTimer() {
+        clearInterval(timeInterval);
+        currentTime = 0;
+        timer.textContent = currentTime;
+    }
+
+    function resetGame() {
+        cards.forEach(card => {
+            card.flipped = false;
+            card.matched = false;
+        });
+        chosenCards.length = 0;
+        createBoard(cards);
+        resetTimer();
+    }
+
+    // Add eventListener to a start a new game button  
+    runGame.addEventListener('click', startGame);
 
     // This function flips a card and updates the game board
 
@@ -117,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-
 
     // This function shuffles the cards array.
     // It generates a random order of the cards for a game.
@@ -165,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // All function for use on Memory game
 
-
     function checkMatchingCards(cards) {
 
         // const flippedCards = cards.filter(card => card.flipped);
@@ -181,32 +230,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 card2.flipped = false;
             }
 
-            chosenCards = []; // Clear the array of cards chosen.
+            chosenCards.length = 0; // Clear the array of cards chosen.
             createBoard(cards); // Update the Board
 
             if (cards.every(card => card.matched)) {
                 alert('Congrats! You won...');
+                gameInProgress = false; // Game finished, stop timer
 
             }
         }
     }
 
-    function updateScore() {
-
-    }
-
     function checkGameOver() {
 
     }
-
-    function resetGame() {
-        cards.forEach(card => {
-            card.flipped = false;
-            card.matched = false;
-        });
-        chosenCards = [];
-        createBoard(cards);
-    }
-
 
 });

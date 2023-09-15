@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
     <title>The Simpsons Memory Game</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="header">
-      <button id="start-game">Start</button>
+        <button id="start-game">Start</button>
     </div>
     <div id="game-board"></div>
     <div id="score-game">
-      <h2>Score</h2>
-      <span id="new-match">Match:</span><br />
-      <span id="wrong-match">Ops!:</span>
+        <h2 class="score-timer">Timer: <span id="timer-count">0</span></h2>
+        <span id="new-match">Match:</span><br />
+        <span id="wrong-match">Ops!:</span>
     </div>
     <footer>Footer</footer>
     <script src="assets/script.js"></script>
-  </body>
+</body>
+
 </html>

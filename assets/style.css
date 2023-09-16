@@ -77,11 +77,23 @@ footer {
 
 
 
-
+/* Class create on function createBoard*/
 .card-image {
     margin: 7px;
     border: 2px solid black;
     border-radius: 50%;
     width: 100%;
 
+}
+
+/* Class create on function createBoard*/
+.board-container {
+    background-color: green;
+    width: 40%;
+    min-height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }

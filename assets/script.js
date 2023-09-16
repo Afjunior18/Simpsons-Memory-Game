@@ -135,11 +135,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateTime() {
-        if (gameInProgress) {
+        if (gameInProgress && currentTime > 0) {
             currentTime--;
             timer.textContent = (currentTime + 's');
+        } else if (currentTime === 0) {
+            clearInterval(timeInterval);
+            gameInProgress = false;
+            alert('Game Over');
+            removeEventListener.cardElement('click');
+
         }
     }
+
 
     function resetTimer() {
         clearInterval(timeInterval);
@@ -163,6 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // This function flips a card and updates the game board
 
     function flipCard(card, cards) {
+        //If the game is not in progessing, user will not be able to click on the card
+        if (!gameInProgress) return;
+
         // Check is the card is not flipped and if we have flipped less than 2 cards
         if (chosenCards.length < 2 && !card.flipped && !card.matched) {
             card.flipped = true; // Mark the card as flipped
@@ -173,8 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (chosenCards.length === 2) {
                 setTimeout(checkMatchingCards, 1000, cards);
             }
-
-            // Marcar ponto no Match
         }
     }
 

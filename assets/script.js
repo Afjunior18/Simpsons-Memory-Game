@@ -107,7 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
             resetGame();
-            gameInProgress = true; // game in progressing, starting timer.
+            gameInProgress = true; // Game in progressing, starting timer.
+
+            //Iniate the game with 0 on counter.
+            newMatch.textContent = '0';
+            wrongMatch.textContent = '0';
+
             startTimer();
         }
     }

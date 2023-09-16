@@ -26,77 +26,77 @@ document.addEventListener("DOMContentLoaded", () => {
     // Array with all cards object
 
     const cards = [{
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false
-        }
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false
+    }
     ];
 
     // Function to initiate the game.
@@ -166,6 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (chosenCards.length === 2) {
                 setTimeout(checkMatchingCards, 1000, cards);
             }
+
+            // Marcar ponto no Match
         }
     }
 
@@ -225,9 +227,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Cards are match
                 card1.matched = true;
                 card2.matched = true;
+
+                // Increment 1 for every new match
+                newMatch.textContent = Number(newMatch.textContent) + 1;
+
             } else {
                 card1.flipped = false;
                 card2.flipped = false;
+
+                // Increment 1 for every new match
+                wrongMatch.textContent = Number(wrongMatch.textContent) + 1;
             }
 
             chosenCards.length = 0; // Clear the array of cards chosen.

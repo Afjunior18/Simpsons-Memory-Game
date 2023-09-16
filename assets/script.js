@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Getting references to HTML elements for later manipulation.
 
     const board = document.getElementById('game-board');
-    const timer = document.querySelector('.score-timer');
+    const timer = document.querySelector('#timer-count');
     const newMatch = document.getElementById('new-match');
     const wrongMatch = document.getElementById('wrong-match');
     // button start a new game 
@@ -26,77 +26,77 @@ document.addEventListener("DOMContentLoaded", () => {
     // Array with all cards object
 
     const cards = [{
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false
-    }
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false
+        }
     ];
 
     // Function to initiate the game.

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create variable for start a timer 
 
-    let currentTime = 0;
+    let currentTime = 60;
     let timeInterval;
 
     // Array to keep track of chosen cards
@@ -109,6 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
             resetGame();
             gameInProgress = true; // Game in progressing, starting timer.
 
+            timer.textContent = '60' + 's';
+
             //Iniate the game with 0 on counter.
             newMatch.textContent = '0';
             wrongMatch.textContent = '0';
@@ -134,14 +136,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateTime() {
         if (gameInProgress) {
-            currentTime++;
-            timer.textContent = currentTime;
+            currentTime--;
+            timer.textContent = (currentTime + 's');
         }
     }
 
     function resetTimer() {
         clearInterval(timeInterval);
-        currentTime = 0;
+        currentTime = 60;
         timer.textContent = currentTime;
     }
 

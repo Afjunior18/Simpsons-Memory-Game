@@ -10,17 +10,24 @@
 </head>
 
 <body>
-    <div id="header">
-        <button id="start-game">Start</button>
-    </div>
-    <div id="game-board">
-        <img src="assets/images/game-rules.png" alt="Games rules">
-    </div>
-    <div id="score-game">
-        <h2 class="score-timer">Timer:<span id="timer-count">60s</span></h2>
-        <h4>Match:<span id="new-match">0</span></h4><br />
-        <h4>Ops!:<span id="wrong-match">0</span></h4>
-    </div>
+    <main id="main-container">
+        <div id="header">
+            <!-- <button id="start-game">Start</button> -->
+        </div>
+        <div id="game-board">
+            <img src="assets/images/game-rules.png" alt="Games rules">
+        </div>
+        <div id="score-game">
+            <div class="btn-game">
+                <button id="start-game">Start</button>
+                <button id="easy-level">Easy</button>
+                <button id="hard-level">Hard</button>
+            </div>
+            <h2 class="score-timer">Timer:<span id="timer-count">60s</span></h2>
+            <h4>Match:<span id="new-match">0</span></h4><br />
+            <h4>Ops!:<span id="wrong-match">0</span></h4>
+        </div>
+    </main>
     <footer>Footer</footer>
     <script src="assets/script.js"></script>
 </body>

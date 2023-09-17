@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const timer = document.querySelector('#timer-count');
     const newMatch = document.getElementById('new-match');
     const wrongMatch = document.getElementById('wrong-match');
-    // button start a new game 
+    // button start the game on easy level 
     const runGame = document.getElementById('start-game');
+    // button start the game on hard level 
+    const hardButton = document.getElementById('hard-level');
 
     // Create variable for start a timer 
 
@@ -99,10 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     ];
 
-    // Function to initiate the game.
+    // Function to initiate the game on easy level.
     // Shuffles the cards and creates the game board.
 
-    function startGame() {
+    function startEasyGame() {
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
@@ -115,21 +117,38 @@ document.addEventListener("DOMContentLoaded", () => {
             newMatch.textContent = '0';
             wrongMatch.textContent = '0';
 
-            startTimer();
+            startTimer(60);
+        }
+    }
+
+    // Function to initiate the game on hard level.
+    function startHardGame() {
+        if (!gameInProgress) {
+            const shuffledCards = shuffleCards(cards);
+            createBoard(shuffledCards);
+            resetGame();
+            gameInProgress = true; // Game in progressing, starting timer.
+
+            timer.textContent = '30' + 's';
+
+            //Iniate the game with 0 on counter.
+            newMatch.textContent = '0';
+            wrongMatch.textContent = '0';
+
+            startTimer(30);
         }
     }
 
     // calling the function to initiate the game
     // startGame();
 
-    // Add eventListener click to a start button for starting the timer
-    document.getElementById('start-game').addEventListener("click", startGame);
+    // Add eventListener click to a level game button
+    document.getElementById('start-game').addEventListener("click", startEasyGame);
+    document.getElementById('hard-level').addEventListener("click", startHardGame);
 
-
-    // Function to set timer
-
-    function startTimer() {
-
+    // Function to set the timer according the level game choice
+    function startTimer(duration) {
+        currentTime = duration;
         timeInterval = setInterval(updateTime, 1000);
 
     }
@@ -165,10 +184,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Add eventListener to a start a new game button  
-    runGame.addEventListener('click', startGame);
+    runGame.addEventListener('click', startEasyGame);
+    hardButton.addEventListener('click', startHardGame);
 
     // This function flips a card and updates the game board
-
     function flipCard(card, cards) {
         //If the game is not in progessing, user will not be able to click on the card
         if (!gameInProgress) return;
@@ -188,13 +207,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // This function shuffles the cards array.
     // It generates a random order of the cards for a game.
-
     function shuffleCards(cards) {
         return cards.sort(() => Math.random() - 0.5);
     }
 
     // this function create the game board.
-
     function createBoard(cards) {
 
         // Clear the existing content of the board element
@@ -228,8 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // All function for use on Memory game
-
+    // This function check matching cards
     function checkMatchingCards(cards) {
 
         // const flippedCards = cards.filter(card => card.flipped);
@@ -248,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card1.flipped = false;
                 card2.flipped = false;
 
-                // Increment 1 for every new match
+                // Increment 1 for every unmacth cards
                 wrongMatch.textContent = Number(wrongMatch.textContent) + 1;
             }
 

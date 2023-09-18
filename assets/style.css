@@ -1,3 +1,6 @@
+/* Importing fonts from Google Fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Noto+Sans&family=Permanent+Marker&display=swap');
+
 /* Removing default margins, paddings and borders */
 
 * {
@@ -12,6 +15,22 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.title-rules {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.sub-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
 }
 
 #main-container {
@@ -43,7 +62,6 @@ body {
     padding: 70px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-evenly;
 }
 
@@ -83,7 +101,7 @@ button {
     width: 100px;
     height: 30px;
     margin-left: 20px;
-
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .score-timer {
@@ -100,7 +118,7 @@ footer {
     height: 50px;
 }
 
-/* Class create on function createBoard*/
+/* Class create on function createBoard */
 .card-image {
     margin: 7px;
     border: 1px solid black;
@@ -110,7 +128,6 @@ footer {
 
 }
 
-/* Class create on function createBoard*/
 .board-cards {
     background-color: yellow;
     width: 40%;

@@ -157,7 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (currentTime === 0) {
             clearInterval(timeInterval);
             gameInProgress = false;
-            alert('Game Over');
+
+            //Calling the function to show a message saying Game Over
+            gameOverMessage();
+            // alert('Game Over');
             removeEventListener.cardElement('click');
 
         }
@@ -298,6 +301,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // Check if the element was found
         if (winMessage) {
             winMessage.style.display = 'none'; // This makes the element invisible
+        }
+    }
+
+    //Function that show a message to the user when the game is over
+    function gameOverMessage() {
+        // Get the element with the ID 'game-over-message' from the DOM
+        const gameOverAlert = document.getElementById('game-over-message');
+
+        // Check if the element was found
+        if (gameOverAlert) {
+            gameOverAlert.style.display = 'block'; // This makes the element visible
+        }
+    }
+
+    //Function that hide the game over message when the game starts again
+    function hideWinMessage() {
+        // Get the element with the ID 'win-message' from the DOM
+        const gameOverAlert = document.getElementById('game-over-message');
+
+        // Check if the element was found
+        if (gameOverAlert) {
+            gameOverAlert.style.display = 'none'; // This makes the element invisible
         }
     }
 

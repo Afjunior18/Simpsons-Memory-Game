@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to initiate the game on easy level.
     // Shuffles the cards and creates the game board.
     function startEasyGame() {
-
+        // Function to hide a winMessage when start a new game
         hideWinMessage();
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to initiate the game on hard level.
     function startHardGame() {
-
+        // Function to hide a winMessage when start a new game
         hideWinMessage();
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
@@ -279,17 +279,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    //Function that show a message to the user when all matches has been found
     function showWinMessage() {
+        // Get the element with the ID 'win-message' from the DOM
         const winMessage = document.getElementById('win-message');
+
+        // Check if the element was found
         if (winMessage) {
-            winMessage.style.display = 'block';
+            winMessage.style.display = 'block'; // This makes the element visible
         }
     }
 
+    //Function that hide the win message when the game starts again
     function hideWinMessage() {
+        // Get the element with the ID 'win-message' from the DOM
         const winMessage = document.getElementById('win-message');
+
+        // Check if the element was found
         if (winMessage) {
-            winMessage.style.display = 'none';
+            winMessage.style.display = 'none'; // This makes the element invisible
         }
     }
 

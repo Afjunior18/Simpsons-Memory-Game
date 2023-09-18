@@ -13,98 +13,96 @@ document.addEventListener("DOMContentLoaded", () => {
     // button start the game on hard level 
     const hardButton = document.getElementById('hard-level');
 
-    // Create variable for start a timer 
-
+    // Create variable for starting a timer 
     let currentTime = 60;
     let timeInterval;
 
     // Array to keep track of chosen cards
-
     let chosenCards = [];
 
     // Variable to control timer if game is in progressing 
     let gameInProgress = false;
 
     // Array with all cards object
-
     const cards = [{
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false
-    }
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false
+        }
     ];
 
     // Function to initiate the game on easy level.
     // Shuffles the cards and creates the game board.
-
     function startEasyGame() {
+
+        hideWinMessage();
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
@@ -123,6 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to initiate the game on hard level.
     function startHardGame() {
+
+        hideWinMessage();
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
@@ -138,9 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
             startTimer(30);
         }
     }
-
-    // calling the function to initiate the game
-    // startGame();
 
     // Add eventListener click to a level game button
     document.getElementById('start-game').addEventListener("click", startEasyGame);
@@ -272,15 +269,35 @@ document.addEventListener("DOMContentLoaded", () => {
             createBoard(cards); // Update the Board
 
             if (cards.every(card => card.matched)) {
-                alert('Congrats! You won...');
+
+                showWinMessage();
+
+                // alert('Congrats! You won...');
                 gameInProgress = false; // Game finished, stop timer
 
             }
         }
     }
 
+    function showWinMessage() {
+        const winMessage = document.getElementById('win-message');
+        if (winMessage) {
+            winMessage.style.display = 'block';
+        }
+    }
+
+    function hideWinMessage() {
+        const winMessage = document.getElementById('win-message');
+        if (winMessage) {
+            winMessage.style.display = 'none';
+        }
+    }
+
+
     function checkGameOver() {
 
     }
+
+
 
 });

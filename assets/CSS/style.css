@@ -102,6 +102,7 @@ button {
     height: 30px;
     margin-left: 20px;
     font-family: 'Noto Sans', sans-serif;
+    cursor: pointer;
 }
 
 .score-timer {
@@ -125,6 +126,7 @@ footer {
     border-radius: 50%;
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 
 }
 

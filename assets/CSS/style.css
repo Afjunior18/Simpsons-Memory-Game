@@ -11,7 +11,9 @@
 }
 
 body {
-    background-image: url('images/cover-body.webp');
+    /* Fallback Background */
+    background-color: yellow;
+    background-image: url('../images/cover-body.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -66,8 +68,6 @@ li {
 }
 
 .alert-message {
-    width: 250px;
-    height: 170px;
     display: none;
     position: fixed;
     top: 35%;

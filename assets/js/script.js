@@ -25,77 +25,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Array with all cards object
     const cards = [{
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false
-        }
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    }
     ];
 
     // Function to initiate the game on easy level.
@@ -219,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Loop through each card in the array
         cards.forEach(card => {
-            if (!card.matched) {
+            if (!card.matched || card.found) {
                 const cardElement = document.createElement('div');
                 const imgElement = document.createElement('img');
 
@@ -230,9 +242,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 cardElement.addEventListener('click', () => {
                     flipCard(card, cards); // calling function flipCard
                 });
-
-                // Check if the card is flipped (face up) or not (face down)
-                if (card.flipped) {
+                if (card.found) {
+                    imgElement.src = 'assets/images/check.webp';
+                } else if (card.flipped) { // Check if the card is flipped (face up) or not (face down)
                     imgElement.src = card.img;
                 } else {
                     imgElement.src = 'assets/images/cover.webp';
@@ -256,6 +268,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Cards are match
                 card1.matched = true;
                 card2.matched = true;
+                card1.found = true;
+                card2.found = true;
 
                 // Increment 1 for every new match
                 newMatch.textContent = Number(newMatch.textContent) + 1;

@@ -25,89 +25,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Array with all cards object
     const cards = [{
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    }
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        }
     ];
 
     // Function to initiate the game on easy level.
@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startEasyGame() {
         // Function to hide a winMessage when start a new game
         hideWinMessage();
+        hideOverMessage();
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
@@ -135,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startHardGame() {
         // Function to hide a winMessage when start a new game
         hideWinMessage();
+        hideOverMessage();
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
@@ -189,9 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
         cards.forEach(card => {
             card.flipped = false;
             card.matched = false;
+            card.found = false;
         });
         chosenCards.length = 0;
+
         createBoard(cards);
+        hideWinMessage();
+        hideOverMessage();
         resetTimer();
     }
 
@@ -289,7 +295,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 showWinMessage();
 
-                // alert('Congrats! You won...');
                 gameInProgress = false; // Game finished, stop timer
 
             }
@@ -330,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //Function that hide the game over message when the game starts again
-    function hideWinMessage() {
+    function hideOverMessage() {
         // Get the element with the ID 'win-message' from the DOM
         const gameOverAlert = document.getElementById('game-over-message');
 

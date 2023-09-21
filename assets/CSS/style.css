@@ -203,7 +203,6 @@ footer {
     #game-board {
         width: 70%;
         height: 1300px;
-
     }
 
     .title-rules {
@@ -231,4 +230,90 @@ footer {
         height: 80px;
         font-size: 2rem;
     }
+}
+
+/* For sreeen sizes from 1600px wide and down */
+@media screen and (max-width:1600px) {
+
+    #game-board {
+        width: 80%;
+        height: 1500px;
+    }
+}
+
+/* For sreeen sizes from 1440px wide and down */
+@media screen and (max-width:1440px) {
+
+    #game-board {
+        width: 70%;
+        height: 1000px;
+    }
+
+    #rules {
+        padding: 90px;
+    }
+
+    .title-rules {
+        font-size: 4.5rem;
+    }
+
+    .sub-title {
+        font-size: 2.7rem;
+    }
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    #score-game {
+        margin-top: 100px;
+    }
+
+    button {
+        width: 160px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* For sreeen sizes from 1200px wide and down */
+@media screen and (max-width:1200px) {
+
+    #game-board {
+        height: 1200px;
+    }
+}
+
+/* For sreeen sizes from 1024px wide and down */
+@media screen and (max-width:1024px) {
+
+    #game-board {
+        width: 75%;
+        height: 800px;
+    }
+
+    .title-rules {
+        font-size: 3.5rem;
+    }
+
+    .sub-title {
+        font-size: 2.2rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    #score-game {
+        margin-top: 70px;
+    }
+
+    button {
+        width: 140px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+
+
 }

@@ -313,7 +313,107 @@ footer {
         height: 40px;
         font-size: 1.1rem;
     }
+}
 
+/* For sreeen sizes from 768px wide and down */
+@media screen and (max-width:768px) {
 
+    #game-board {
+        width: 80%;
+        height: 700px;
+    }
 
+    .title-rules {
+        font-size: 2.5rem;
+    }
+
+    .sub-title {
+        font-size: 1.6rem;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    #rules {
+        padding: 60px;
+    }
+
+    #score-game {
+        margin-top: 30px;
+    }
+
+    button {
+        width: 120px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* For sreeen sizes from 425px wide and down */
+@media screen and (max-width:425px) {
+
+    #game-board {
+        height: 650px;
+    }
+
+    .title-rules {
+        font-size: 2.3rem;
+    }
+
+    .sub-title {
+        font-size: 1.4rem;
+    }
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    #rules {
+        padding: 40px;
+    }
+
+    #score-game {
+        margin-top: 20px;
+    }
+
+    button {
+        width: 100px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}
+
+/* For sreeen sizes from 320px wide and down */
+@media screen and (max-width:320px) {
+
+    #game-board {
+        height: 650px;
+    }
+
+    .title-rules {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 1.3rem;
+    }
+
+    body {
+        font-size: 0.7rem;
+    }
+
+    #rules {
+        padding: 20px;
+    }
+
+    #score-game {
+        margin-top: 10px;
+    }
+
+    button {
+        width: 90px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
 }

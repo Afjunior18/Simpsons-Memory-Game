@@ -146,7 +146,7 @@ footer {
 @media screen and (max-width:4000px) {
 
     #game-board {
-        width: 70%;
+        width: 60%;
         height: 1600px;
         align-items: center;
     }
@@ -154,7 +154,7 @@ footer {
     .card-image {
         border: 2px solid black;
         width: 100%;
-        height: 400px;
+        height: 500px;
     }
 
     .title-rules {
@@ -188,9 +188,13 @@ footer {
 @media screen and (max-width:2560px) {
 
     #game-board {
-        width: 80%;
-        height: 1700px;
+        width: 53%;
+        height: 1800px;
 
+    }
+
+    .card-image {
+        height: 400px;
     }
 
     .sub-title {
@@ -207,7 +211,7 @@ footer {
 
     #game-board {
         width: 70%;
-        height: 1300px;
+        height: 1000px;
     }
 
     .card-image {
@@ -227,7 +231,7 @@ footer {
     }
 
     #rules {
-        padding: 110px;
+        padding: 50px;
     }
 
     #score-game {
@@ -245,12 +249,38 @@ footer {
 @media screen and (max-width:1600px) {
 
     #game-board {
-        width: 80%;
-        height: 1100px;
+        width: 70%;
+        height: 840px;
+    }
+
+    #rules {
+        padding 30px;
     }
 
     .card-image {
         height: 250px;
+    }
+
+    .title-rules {
+        font-size: 4.7rem;
+    }
+
+    .sub-title {
+        font-size: 3rem;
+    }
+
+    body {
+        font-size: 1.6rem;
+    }
+
+    #score-game {
+        margin-top: 80px;
+    }
+
+    button {
+        width: 180px;
+        height: 60px;
+        font-size: 1.2rem;
     }
 }
 
@@ -258,8 +288,8 @@ footer {
 @media screen and (max-width:1440px) {
 
     #game-board {
-        width: 70%;
-        height: 850px;
+        width: 65%;
+        height: 700px;
     }
 
     .card-image {
@@ -267,23 +297,23 @@ footer {
     }
 
     #rules {
-        padding: 90px;
+        padding: 35px;
     }
 
     .title-rules {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     .sub-title {
-        font-size: 2.7rem;
+        font-size: 2.5rem;
     }
 
     body {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     #score-game {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     button {
@@ -297,7 +327,7 @@ footer {
 @media screen and (max-width:1200px) {
 
     #game-board {
-        height: 900px;
+        height: 700px;
         width: 80%;
     }
 
@@ -311,7 +341,8 @@ footer {
 @media screen and (max-width:1024px) {
 
     #game-board {
-        height: 800px;
+        width: 80%;
+        height: 600px;
     }
 
     .card-image {
@@ -345,80 +376,28 @@ footer {
 @media screen and (max-width:768px) {
 
     #game-board {
-        width: 70%;
-        height: 700px;
+        width: 90%;
+        height: 500px;
     }
 
     .card-image {
         height: 140px;
     }
 
+    #rules {
+        padding: 30px;
+    }
+
     .title-rules {
-        font-size: 2.5rem;
+        font-size: 3.3rem;
     }
 
     .sub-title {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     body {
         font-size: 0.9rem;
-    }
-
-    #rules {
-        padding: 60px;
-    }
-
-    #score-game {
-        margin-top: 30px;
-    }
-
-    button {
-        width: 120px;
-        height: 35px;
-        font-size: 1rem;
-    }
-}
-
-/* For sreeen sizes from 768px wide and down */
-@media screen and (max-width:768px) {
-
-    #game-board {
-        width: 95%;
-    }
-
-    #rules {
-        padding: 30px;
-    }
-}
-
-/* For sreeen sizes from 425px wide and down */
-@media screen and (max-width:425px) {
-
-    #game-board {
-        height: 650px;
-        width: 100%;
-        border-radius: 0;
-    }
-
-    .card-image {
-        height: 110px;
-    }
-
-    .title-rules {
-        font-size: 2.3rem;
-    }
-
-    .sub-title {
-        font-size: 1.4rem;
-    }
-
-    body {
-        font-size: 0.8rem;
-    }
-
-    #rules {
-        padding: 40px;
     }
 
     #score-game {
@@ -426,9 +405,44 @@ footer {
     }
 
     button {
+        width: 130px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+/* For sreeen sizes from 425px wide and down */
+@media screen and (max-width:425px) {
+
+    #game-board {
+        height: 500px;
+        width: 95%;
+    }
+
+    .card-image {
+        height: 100px;
+    }
+
+    .title-rules {
+        font-size: 1.7rem;
+    }
+
+    .sub-title {
+        font-size: 1.5rem;
+    }
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    #score-game {
+        margin-top: 15px;
+    }
+
+    button {
         width: 100px;
         height: 35px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -466,12 +480,12 @@ footer {
 @media screen and (max-width:375px) {
 
     #game-board {
-        width: 80%;
-        height: 410px;
+        width: 90%;
+        height: 420px;
     }
 
     .card-image {
-        height: 70px;
+        height: 80px;
     }
 
     .title-rules {

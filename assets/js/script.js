@@ -25,89 +25,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Array with all cards object
     const cards = [{
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card01',
-            img: 'assets/images/bart.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card02',
-            img: 'assets/images/bart01.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card03',
-            img: 'assets/images/family.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card04',
-            img: 'assets/images/homer.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card05',
-            img: 'assets/images/lisa.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        },
-        {
-            name: 'Card06',
-            img: 'assets/images/mother.webp',
-            flipped: false,
-            matched: false,
-            found: false
-        }
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card01',
+        img: 'assets/images/bart.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card02',
+        img: 'assets/images/bart01.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card03',
+        img: 'assets/images/family.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card04',
+        img: 'assets/images/homer.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card05',
+        img: 'assets/images/lisa.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    },
+    {
+        name: 'Card06',
+        img: 'assets/images/mother.webp',
+        flipped: false,
+        matched: false,
+        found: false
+    }
     ];
 
     // Function to initiate the game on easy level.

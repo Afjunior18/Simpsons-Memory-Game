@@ -67,6 +67,7 @@ li {
     align-items: end;
 } */
 
+
 .alert-message {
     display: none;
     position: fixed;
@@ -182,6 +183,11 @@ footer {
         height: 110px;
         font-size: 3rem;
     }
+
+    .alert-message {
+        width: 900px;
+        height: 400px
+    }
 }
 
 /* For sreeen sizes from 2560px wide and down */
@@ -203,6 +209,11 @@ footer {
 
     body {
         font-size: 2.5rem;
+    }
+
+    .alert-message {
+        width: 700px;
+        height: 350px
     }
 }
 
@@ -243,6 +254,11 @@ footer {
         height: 80px;
         font-size: 2rem;
     }
+
+    .alert-message {
+        width: 500px;
+        height: 300px
+    }
 }
 
 /* For sreeen sizes from 1600px wide and down */
@@ -281,6 +297,11 @@ footer {
         width: 180px;
         height: 60px;
         font-size: 1.2rem;
+    }
+
+    .alert-message {
+        width: 400px;
+        height: 270px
     }
 }
 
@@ -321,6 +342,11 @@ footer {
         height: 50px;
         font-size: 1.2rem;
     }
+
+    .alert-message {
+        width: 350px;
+        height: 240px
+    }
 }
 
 /* For sreeen sizes from 1200px wide and down */
@@ -334,6 +360,11 @@ footer {
     .card-image {
         height: 200px;
         border: 1px solid black;
+    }
+
+    .alert-message {
+        width: 300px;
+        height: 220px
     }
 }
 
@@ -369,6 +400,11 @@ footer {
         width: 140px;
         height: 40px;
         font-size: 1.1rem;
+    }
+
+    .alert-message {
+        width: 250px;
+        height: 220px;
     }
 }
 
@@ -408,6 +444,11 @@ footer {
         width: 130px;
         height: 40px;
         font-size: 1.1rem;
+    }
+
+    .alert-message {
+        width: 200px;
+        height: 320px;
     }
 }
 
@@ -474,6 +515,10 @@ footer {
         padding: 20px;
     }
 
+    .alert-message {
+        width: 200px;
+        height: 260px;
+    }
 }
 
 /* For sreeen sizes from 375px wide and down */
@@ -564,5 +609,10 @@ footer {
         width: 60px;
         height: 20px;
         font-size: 0.6rem;
+    }
+
+    .alert-message {
+        width: 200px;
+        height: 220px;
     }
 }

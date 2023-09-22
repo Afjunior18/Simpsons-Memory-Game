@@ -174,12 +174,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             //Calling the function to show a message saying Game Over
             gameOverMessage();
-            // alert('Game Over');
             removeEventListener.cardElement('click');
 
         }
     }
-
 
     function resetTimer() {
         clearInterval(timeInterval);
@@ -277,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card1.found = true;
                 card2.found = true;
 
-                // Increment 1 for every new match
+                // Increment 1 for every new match 
                 newMatch.textContent = Number(newMatch.textContent) + 1;
 
             } else {
@@ -308,6 +306,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Check if the element was found
         if (winMessage) {
+            const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds!"`;
+            winMessage.querySelector('p').textContent = timerInfo;
             winMessage.style.display = 'block'; // This makes the element visible
         }
     }

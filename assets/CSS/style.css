@@ -216,16 +216,51 @@ footer {
     }
 }
 
-/* For sreeen sizes from 2000px wide and down */
-@media screen and (max-width:2000px) {
+/* For sreeen sizes from 2400px wide and down */
+@media screen and (max-width:2400px) {
+    .card-image {
+        height: 350px;
+    }
+}
 
+/* For sreeen sizes from 2150px wide and down */
+@media screen and (max-width:2150px) {
     #game-board {
-        width: 70%;
-        height: 1000px;
+        width: 50%;
+        height: 1400px;
     }
 
     .card-image {
         height: 300px;
+    }
+
+    #rules {
+        padding: 65px;
+    }
+
+    .title-rules {
+        font-size: 5.6rem;
+    }
+
+    .sub-title {
+        font-size: 3.7rem;
+    }
+
+    body {
+        font-size: 2.1rem;
+    }
+}
+
+/* For sreeen sizes from 2000px wide and down */
+@media screen and (max-width:2000px) {
+
+    #game-board {
+        width: 50%;
+        height: fit-content;
+    }
+
+    .card-image {
+        height: 200px;
     }
 
     .title-rules {
@@ -265,7 +300,6 @@ footer {
 
     #game-board {
         width: 70%;
-        height: 840px;
     }
 
     #rules {
@@ -273,7 +307,7 @@ footer {
     }
 
     .card-image {
-        height: 250px;
+        height: 220px;
     }
 
     .title-rules {
@@ -309,11 +343,10 @@ footer {
 
     #game-board {
         width: 65%;
-        height: 700px;
     }
 
     .card-image {
-        height: 200px;
+        height: 170px;
     }
 
     #rules {
@@ -352,13 +385,8 @@ footer {
 /* For sreeen sizes from 1200px wide and down */
 @media screen and (max-width:1200px) {
 
-    #game-board {
-        height: 700px;
-        width: 80%;
-    }
-
     .card-image {
-        height: 200px;
+        height: 150px;
         border: 1px solid black;
     }
 
@@ -371,13 +399,8 @@ footer {
 /* For sreeen sizes from 1024px wide and down */
 @media screen and (max-width:1024px) {
 
-    #game-board {
-        width: 80%;
-        height: 600px;
-    }
-
     .card-image {
-        height: 170px;
+        height: 130px;
     }
 
     .title-rules {
@@ -418,7 +441,6 @@ footer {
 
     #game-board {
         width: 90%;
-        height: 500px;
     }
 
     .card-image {
@@ -462,12 +484,25 @@ footer {
     }
 }
 
+/* For sreeen sizes from 560px wide and down */
+@media screen and (max-width:560px) {
+
+    #game-board {
+        width: 99%;
+    }
+
+    .card-image {
+        height: 115px;
+    }
+
+}
+
+
 /* For sreeen sizes from 425px wide and down */
 @media screen and (max-width:425px) {
 
     #game-board {
-        height: 500px;
-        width: 95%;
+        width: 98%;
     }
 
     .card-image {
@@ -502,7 +537,7 @@ footer {
 
     #game-board {
         width: 90%;
-        height: 430px;
+        /* height: 430px; */
     }
 
     .card-image {
@@ -536,8 +571,8 @@ footer {
 @media screen and (max-width:375px) {
 
     #game-board {
-        width: 90%;
-        height: 420px;
+        width: 98%;
+        /* height: 420px; */
     }
 
     .card-image {
@@ -575,8 +610,8 @@ footer {
 @media screen and (max-width:320px) {
 
     #game-board {
-        width: 95%;
-        height: 400px;
+        width: 99%;
+        gap: 5px;
     }
 
     .card-image {
@@ -589,7 +624,6 @@ footer {
 
     #game-board {
         width: 97%;
-        height: 350px;
     }
 
     .card-image {

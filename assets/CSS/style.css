@@ -136,11 +136,6 @@ footer {
     cursor: pointer;
 }
 
-.card-image img {
-    background-color: yellow;
-
-}
-
 .board-cards {
     background-color: yellow;
     width: 40%;
@@ -195,7 +190,13 @@ footer {
 
     .alert-message {
         width: 900px;
-        height: 400px
+        height: 400px;
+        top: 20%;
+    }
+
+    .game-over-image img {
+        width: 700px;
+        height: 250px;
     }
 }
 
@@ -208,6 +209,11 @@ footer {
 
     .card-image {
         height: 350px;
+    }
+
+    .game-over-image img {
+        width: 500px;
+
     }
 }
 
@@ -224,8 +230,10 @@ footer {
 
     .alert-message {
         width: 700px;
-        height: 350px
+        height: 350px;
+        top: 35%;
     }
+
 }
 
 /* For sreeen sizes from 2150px wide and down */
@@ -253,6 +261,11 @@ footer {
 
     body {
         font-size: 2.1rem;
+    }
+
+    .game-over-image img {
+        width: 400px;
+
     }
 }
 
@@ -287,7 +300,13 @@ footer {
 
     .alert-message {
         width: 500px;
-        height: 300px
+        height: 300px;
+        top: 25%;
+    }
+
+    .game-over-image img {
+        width: 300px;
+        height: 170px;
     }
 }
 
@@ -369,6 +388,11 @@ footer {
         height: 240px;
         padding: 15px;
     }
+
+    .game-over-image img {
+        width: 250px;
+        height: 150px;
+    }
 }
 
 /* For sreeen sizes from 1200px wide and down */
@@ -381,6 +405,11 @@ footer {
     .alert-message {
         width: 300px;
         height: 235px;
+    }
+
+    .game-over-image img {
+        width: 200px;
+        height: 140px;
     }
 }
 
@@ -419,14 +448,9 @@ footer {
     }
 
     .alert-message {
-        width: 250px;
-        height: 220px;
-        padding-top: 30px;
+        top: 30%;
     }
 
-    .congrsts-image img {
-        width: 150x;
-    }
 }
 
 /* For sreeen sizes from 768px wide and down */
@@ -468,16 +492,6 @@ footer {
         width: 130px;
         height: 40px;
         font-size: 1.1rem;
-    }
-
-    .alert-message {
-        width: 200px;
-        height: 320px;
-        padding-top: 80px;
-    }
-
-    .congrats-image {
-        width: 200px;
     }
 }
 
@@ -558,12 +572,6 @@ footer {
     #rules {
         padding: 20px;
     }
-
-    .alert-message {
-        width: 200px;
-        height: 260px;
-        padding-top: 65px;
-    }
 }
 
 /* For sreeen sizes from 375px wide and down */
@@ -603,6 +611,15 @@ footer {
         height: 30px;
         font-size: 0.7rem;
     }
+
+    .game-over-image img {
+        width: 200px;
+        height: 140px;
+    }
+
+    #game-over-message p {
+        font-size: 1rem;
+    }
 }
 
 /* For sreeen sizes from 320px wide and down */
@@ -615,13 +632,29 @@ footer {
     .card-image {
         height: 70px;
     }
+
+    .alert-message {
+        width: 200px;
+        height: 200px;
+        padding-top: 30px;
+    }
+
+    .congrats-image img {
+        width: 160px;
+        height: 100px;
+    }
+
+    .game-over-image img {
+        width: 200px;
+        height: 140px;
+    }
 }
 
 /* For sreeen sizes from 280px wide */
 @media screen and (max-width:280px) {
 
     #main-container {
-        margin-left: 3px;
+        margin-left: 15px;
     }
 
     #game-board {
@@ -663,8 +696,14 @@ footer {
     }
 
     .alert-message {
-        width: 200px;
-        height: 220px;
+        width: 180px;
+        height: 200px;
         padding-top: 50px;
+        top: 25%;
+        left: 46%;
+    }
+
+    .congrats-image img {
+        width: 150px;
     }
 }

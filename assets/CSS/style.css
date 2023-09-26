@@ -24,21 +24,21 @@ li {
     list-style-type: none;
 }
 
-#main-container {
+/* #main-container {
     margin: 100px auto;
-}
+} */
 
 #game-board {
     background-color: yellow;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     width: 40%;
     height: fit-content;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 5%;
-    padding: 70px;
+    /* padding: 70px; */
     gap: 15px;
 }
 
@@ -49,6 +49,7 @@ li {
     color: white;
     margin-top: 10px;
     padding: 0 30px;
+    border-radius: 15%;
 }
 
 #rules {
@@ -106,6 +107,7 @@ button {
     margin-left: 20px;
     font-family: 'Noto Sans', sans-serif;
     cursor: pointer;
+    border-radius: 25%;
 }
 
 .score-timer {
@@ -430,10 +432,6 @@ footer {
 /* For sreeen sizes from 768px wide and down */
 @media screen and (max-width:768px) {
 
-    #main-container {
-        margin-left: 50px;
-    }
-
     #game-board {
         width: 90%;
     }
@@ -468,10 +466,6 @@ footer {
 /* For sreeen sizes from 560px wide and down */
 @media screen and (max-width:560px) {
 
-    #main-container {
-        margin-left: 0;
-    }
-
     #game-board {
         width: 95%;
     }
@@ -484,10 +478,6 @@ footer {
 
 /* For sreeen sizes from 425px wide and down */
 @media screen and (max-width:425px) {
-
-    #main-container {
-        margin-left: 5px;
-    }
 
     #game-board {
         width: 98%;
@@ -509,6 +499,15 @@ footer {
         width: 100px;
         height: 35px;
         font-size: 0.9rem;
+    }
+
+    #count-container {
+        padding: 0;
+    }
+
+    h4 {
+        padding: 10px;
+        margin-left: 50px;
     }
 }
 
@@ -581,6 +580,10 @@ footer {
     #game-over-message p {
         font-size: 1rem;
     }
+
+    h4 {
+        margin-left: 30px;
+    }
 }
 
 /* For sreeen sizes from 320px wide and down */
@@ -609,14 +612,14 @@ footer {
         width: 150px;
         height: 100px;
     }
+
+    h4 {
+        margin-left: 15px;
+    }
 }
 
 /* For sreeen sizes from 280px wide */
 @media screen and (max-width:280px) {
-
-    #main-container {
-        margin-left: 15px;
-    }
 
     #game-board {
         width: 97%;

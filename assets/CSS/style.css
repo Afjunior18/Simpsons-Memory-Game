@@ -45,6 +45,10 @@ li {
 #count-container {
     display: flex;
     align-items: center;
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+    padding: 0 30px;
 }
 
 #rules {
@@ -65,15 +69,6 @@ li {
     font-size: 2rem;
 }
 
-/* #header {
-    width: 100%;
-    height: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-} */
-
-
 .alert-message {
     display: none;
     position: fixed;
@@ -88,18 +83,18 @@ li {
 }
 
 #score-game {
-    width: 100%;
-    height: 150px;
+    width: fit-content;
     display: flex;
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 .btn-game {
     display: flex;
-    margin-left: 5px;
 }
 
 button {
@@ -123,6 +118,7 @@ h4 {
 }
 
 footer {
+    background-color: blue;
     width: 100%;
     height: 50px;
 }
@@ -174,10 +170,6 @@ footer {
         font-size: 3rem;
     }
 
-    #score-game {
-        margin-top: 200px;
-    }
-
     #rules {
         padding: 130px;
     }
@@ -213,7 +205,6 @@ footer {
 
     .game-over-image img {
         width: 500px;
-
     }
 }
 
@@ -233,7 +224,6 @@ footer {
         height: 350px;
         top: 35%;
     }
-
 }
 
 /* For sreeen sizes from 2150px wide and down */
@@ -288,10 +278,6 @@ footer {
         font-size: 2rem;
     }
 
-    #score-game {
-        margin-top: 150px;
-    }
-
     button {
         width: 200px;
         height: 80px;
@@ -333,10 +319,6 @@ footer {
         font-size: 1.6rem;
     }
 
-    #score-game {
-        margin-top: 80px;
-    }
-
     button {
         width: 180px;
         height: 60px;
@@ -371,10 +353,6 @@ footer {
 
     body {
         font-size: 1.3rem;
-    }
-
-    #score-game {
-        margin-top: 80px;
     }
 
     button {
@@ -437,10 +415,6 @@ footer {
         font-size: 1rem;
     }
 
-    #score-game {
-        margin-top: 70px;
-    }
-
     button {
         width: 140px;
         height: 40px;
@@ -482,10 +456,6 @@ footer {
 
     body {
         font-size: 0.9rem;
-    }
-
-    #score-game {
-        margin-top: 20px;
     }
 
     button {
@@ -535,10 +505,6 @@ footer {
         font-size: 0.8rem;
     }
 
-    #score-game {
-        margin-top: 15px;
-    }
-
     button {
         width: 100px;
         height: 35px;
@@ -579,7 +545,6 @@ footer {
 
     #game-board {
         width: 98%;
-        /* height: 420px; */
     }
 
     .card-image {
@@ -600,10 +565,6 @@ footer {
 
     #rules {
         padding: 15px;
-    }
-
-    #score-game {
-        margin-top: 10px;
     }
 
     button {
@@ -645,8 +606,8 @@ footer {
     }
 
     .game-over-image img {
-        width: 200px;
-        height: 140px;
+        width: 150px;
+        height: 100px;
     }
 }
 
@@ -659,10 +620,6 @@ footer {
 
     #game-board {
         width: 97%;
-    }
-
-    #score-game {
-        height: 95px;
     }
 
     .card-image {
@@ -683,10 +640,6 @@ footer {
 
     #rules {
         padding: 12px;
-    }
-
-    #score-game {
-        margin-top: 5px;
     }
 
     button {

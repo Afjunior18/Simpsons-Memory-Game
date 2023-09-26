@@ -2,15 +2,13 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Getting references to HTML elements for later manipulation.
+    //Getting references to HTML elements for later manipulation
 
     const board = document.getElementById('game-board');
     const timer = document.querySelector('#timer-count');
     const newMatch = document.getElementById('new-match');
     const wrongMatch = document.getElementById('wrong-match');
-    // button start the game on easy level 
     const runGame = document.getElementById('start-game');
-    // button start the game on hard level 
     const hardButton = document.getElementById('hard-level');
 
     // Create variable for starting a timer 
@@ -23,100 +21,110 @@ document.addEventListener("DOMContentLoaded", () => {
     // Variable to control timer if game is in progressing 
     let gameInProgress = false;
 
-    // Array with all cards object
-    const cards = [{
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card01',
-        img: 'assets/images/bart.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card02',
-        img: 'assets/images/bart01.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card03',
-        img: 'assets/images/family.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card04',
-        img: 'assets/images/homer.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card05',
-        img: 'assets/images/lisa.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    },
-    {
-        name: 'Card06',
-        img: 'assets/images/mother.webp',
-        flipped: false,
-        matched: false,
-        found: false
-    }
+    // Array with all object of cards
+    const cards = [
+
+        {
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card01',
+            img: 'assets/images/bart.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card02',
+            img: 'assets/images/bart01.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card03',
+            img: 'assets/images/family.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card04',
+            img: 'assets/images/homer.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card05',
+            img: 'assets/images/lisa.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        },
+        {
+            name: 'Card06',
+            img: 'assets/images/mother.webp',
+            flipped: false,
+            matched: false,
+            found: false
+        }
+
     ];
 
     // Function to initiate the game on easy level.
     // Shuffles the cards and creates the game board.
     function startEasyGame() {
-        // Function to hide a winMessage when start a new game
+
+        // Functions to hide a win and game over message when starts a new game
         hideWinMessage();
         hideOverMessage();
+
+        // Hide the buttons when starts the game
+        runGame.style.display = 'none';
+        hardButton.style.display = 'none';
+
         if (!gameInProgress) {
+
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
             resetGame();
@@ -134,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to initiate the game on hard level.
     function startHardGame() {
-        // Function to hide a winMessage when start a new game
+
         hideWinMessage();
         hideOverMessage();
         if (!gameInProgress) {
@@ -151,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             startTimer(30);
         }
+
     }
 
     // Add eventListener click to a level game button
@@ -198,10 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
         hideOverMessage();
         resetTimer();
     }
-
-    // Add eventListener to a start a new game button  
-    runGame.addEventListener('click', startEasyGame);
-    hardButton.addEventListener('click', startHardGame);
 
     // This function flips a card and updates the game board
     function flipCard(card, cards) {

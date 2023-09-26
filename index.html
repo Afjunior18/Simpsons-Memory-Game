@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The Simpsons Memory Game">
     <meta name="keyword" content="The Simpsons, Simpsons, Memory Game, Match Cards">
+    <!-- This link imports the CSS file that styles the page -->
     <link rel="stylesheet" href="assets/CSS/style.css" />
     <title>The Simpsons Memory Game</title>
 </head>
@@ -16,14 +17,24 @@
         <!--Win and Game Over message box-->
         <section>
             <div id="win-message" class="alert-message congrats-image">
-                <img src="  assets/images/back-card.png" alt="The simpsons">
+                <img src="assets/images/back-card.png" alt="Heads of Simpsons characters">
                 <p>Congratulations!</p>
+                <button class="btn-message">Start Easy</button>
+                <button class="btn-message">Start Hard</button>
             </div>
             <div id="game-over-message" class="alert-message game-over-image">
                 <img src="assets/images/game-over-message.webp" alt="Homer and Bart Simpson">
                 <p>Game Over!</p>
+                <button class="btn-message">Start Easy</button>
+                <button class="btn-message">Start Hard</button>
             </div>
         </section>
+        <di>
+            <div class="btn-game">
+                <button id="start-game">Start / Easy</button>
+                <button id="hard-level">Start / Hard</button>
+            </div>
+        </di>
         <!--Game and Rules Board-->
         <section>
             <div id="game-board" class="board-cards">
@@ -64,10 +75,6 @@
         <!--Score Game and buttons-->
         <section>
             <div id="score-game">
-                <div class="btn-game">
-                    <button id="start-game">Start / Easy</button>
-                    <button id="hard-level">Start / Hard</button>
-                </div>
                 <div id="count-container">
                     <h2 class="score-timer">Timer:<span id="timer-count"> 0</span></h2>
                     <h4>Match:<span id="new-match"> 0</span></h4><br />
@@ -76,7 +83,9 @@
             </div>
         </section>
     </main>
+    <!--Footer-->
     <footer>Footer</footer>
+    <!-- This script loads the JavaScript file that controls the game -->
     <script src="assets/js/script.js"></script>
 </body>
 

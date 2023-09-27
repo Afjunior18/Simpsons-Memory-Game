@@ -21,7 +21,7 @@ html {
 body {
     /* Fallback Background */
     background-color: yellow;
-    background-image: url('../images/cover-body.webp');
+    background-image: url('../images/body-image.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,11 +30,6 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-
-h4 {
-    padding: 2px;
-    margin-left: 100px;
 }
 
 li {
@@ -82,9 +77,14 @@ li {
     align-items: center;
     background-color: blue;
     color: white;
-    margin-top: 10px;
-    padding: 0 30px;
-    border-radius: 15%;
+    /* margin-top: 10px; */
+    /* padding: 0 30px; */
+    /* border-radius: 15%; */
+}
+
+#count-container p {
+    padding: 5px;
+    margin: 0 15px;
 }
 
 .score-timer {
@@ -117,7 +117,7 @@ button {
     font-size: 3rem;
 }
 
-.sub-title {
+.text-topic {
     font-family: 'Caveat', cursive;
     font-size: 2rem;
 }
@@ -192,7 +192,7 @@ footer {
         font-size: 7rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 4.5rem;
     }
 
@@ -245,7 +245,7 @@ footer {
 /* For sreeen sizes from 2560px wide and down */
 @media screen and (max-width:2560px) {
 
-    .sub-title {
+    .text-topic {
         font-size: 4rem;
     }
 
@@ -255,7 +255,7 @@ footer {
 
     .alert-message {
         width: 700px;
-        height: 450px;
+        height: 480px;
         top: 30%;
     }
 }
@@ -279,7 +279,7 @@ footer {
         font-size: 5.6rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 3.7rem;
     }
 
@@ -304,7 +304,7 @@ footer {
         font-size: 5.5rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 3.5rem;
     }
 
@@ -348,7 +348,7 @@ footer {
         font-size: 4.7rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 3rem;
     }
 
@@ -388,7 +388,7 @@ footer {
         font-size: 4rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 2.5rem;
     }
 
@@ -457,7 +457,7 @@ footer {
         font-size: 3.5rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 2.2rem;
     }
 
@@ -495,7 +495,7 @@ footer {
         font-size: 3.3rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 2rem;
     }
 
@@ -538,11 +538,15 @@ footer {
         width: 98%;
     }
 
+    #rules {
+        padding: 20px;
+    }
+
     .title-rules {
         font-size: 1.7rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 1.5rem;
     }
 
@@ -558,11 +562,6 @@ footer {
 
     #count-container {
         padding: 0;
-    }
-
-    h4 {
-        padding: 10px;
-        margin-left: 50px;
     }
 }
 
@@ -581,7 +580,7 @@ footer {
         font-size: 1.6rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 1.3rem;
     }
 
@@ -609,7 +608,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 1.2rem;
     }
 
@@ -635,10 +634,6 @@ footer {
     #game-over-message p {
         font-size: 1rem;
     }
-
-    h4 {
-        margin-left: 30px;
-    }
 }
 
 /* For sreeen sizes from 320px wide and down */
@@ -658,7 +653,7 @@ footer {
 
     .alert-message {
         width: 200px;
-        height: 200px;
+        height: 220px;
         padding-top: 30px;
     }
 
@@ -673,11 +668,7 @@ footer {
 
     .game-over-image img {
         width: 150px;
-        height: 100px;
-    }
-
-    h4 {
-        margin-left: 15px;
+        height: 80px;
     }
 }
 
@@ -696,7 +687,7 @@ footer {
         font-size: 1.2rem;
     }
 
-    .sub-title {
+    .text-topic {
         font-size: 1rem;
     }
 
@@ -716,9 +707,9 @@ footer {
 
     .alert-message {
         width: 180px;
-        height: 200px;
+        height: 230px;
         padding-top: 50px;
-        top: 25%;
+        top: 35%;
         left: 50%;
     }
 

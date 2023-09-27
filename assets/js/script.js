@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Shuffles the cards and creates the game board.
     function startEasyGame() {
 
-        // Functions to hide a win and game over message when starts a new game
         hideWinMessage();
         hideOverMessage();
 
@@ -145,6 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         hideWinMessage();
         hideOverMessage();
+
+        // Hide the buttons when starts the game
+        runGame.style.display = 'none';
+        hardButton.style.display = 'none';
+
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
@@ -311,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Check if the element was found
         if (winMessage) {
-            const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds!"`;
+            const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds! Play again?"`;
             winMessage.querySelector('p').textContent = timerInfo;
             winMessage.style.display = 'block'; // This makes the element visible
         }

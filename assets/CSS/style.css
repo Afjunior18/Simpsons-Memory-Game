@@ -146,11 +146,15 @@ button {
 
 /* Footer */
 
-footer {
+#footer {
     background-color: blue;
     width: 100%;
-    height: 50px;
     margin-top: auto;
+    display: flex;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    justify-content: space-around;
 }
 
 /* Class created on function createBoard, style cards of the game */
@@ -658,6 +662,11 @@ footer {
     .game-over-image img {
         width: 150px;
         height: 80px;
+    }
+
+    #footer {
+        font-size: 0.6rem;
+        letter-spacing: 0;
     }
 }
 

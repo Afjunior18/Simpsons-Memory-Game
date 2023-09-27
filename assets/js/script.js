@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // This function flips a card and updates the game board
     function flipCard(card, cards) {
-        //If the game is not in progessing, user will not be able to click on the card
+        // If the game is not in progessing, user will not be able to click on the card
         if (!gameInProgress) return;
 
         // Check is the card is not flipped and if we have flipped less than 2 cards
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
             chosenCards.push(card); // Add the card to flipped cards
             createBoard(cards);
 
-            //after chosen 2 cards, wait for 1 second before checking for match
+            // After chosen 2 cards, wait for 1 second before checking for match
             if (chosenCards.length === 2) {
                 setTimeout(checkMatchingCards, 1000, cards);
             }
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     flipCard(card, cards); // calling function flipCard
                 });
                 if (card.found) {
-                    imgElement.src = 'assets/images/check.webp';
+                    imgElement.src = 'assets/images/blue-check.png';
                 } else if (card.flipped) { // Check if the card is flipped (face up) or not (face down)
                     imgElement.src = card.img;
                 } else {

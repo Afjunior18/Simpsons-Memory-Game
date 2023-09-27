@@ -106,13 +106,13 @@ button {
     font-family: 'Caveat', cursive;
     text-align: center;
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: blue;
 }
 
 .text-topic {
     font-family: 'Caveat', cursive;
     font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: blue;
 }
 
 /* Win and Game Over message box */
@@ -156,7 +156,46 @@ button {
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 50%;
-    width: 30%;
+}
+
+.card-image:hover {
+    border: 2px solid blue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation Section */
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.title-rules {
+    animation: bounce 4s;
+}
+
+/* Animation to buttons */
+
+.btn-game button {
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-game button:hover {
+    transform: scale(1.1);
 }
 
 /* Media query Section */

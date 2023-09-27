@@ -100,17 +100,19 @@ button {
     border-radius: 25%;
 }
 
-/* Classes to style titles and subtitles */
+/* Classes to style titles and topics */
 
 .title-rules {
     font-family: 'Caveat', cursive;
     text-align: center;
     font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .text-topic {
     font-family: 'Caveat', cursive;
     font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Win and Game Over message box */
@@ -185,9 +187,9 @@ button {
         font-size: 3rem;
     }
 
-    /* #rules {
-        padding: 130px;
-    } */
+    #rules {
+        padding: 100px;
+    }
 
     button {
         width: 300px;
@@ -256,9 +258,9 @@ button {
         border: 1px solid black;
     }
 
-    /* #rules {
-        padding: 20px;
-    } */
+    #rules {
+        padding: 60px;
+    }
 
     .title-rules {
         font-size: 5.6rem;
@@ -286,11 +288,11 @@ button {
     }
 
     .title-rules {
-        font-size: 5.5rem;
+        font-size: 5.3rem;
     }
 
     .text-topic {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
     }
 
     body {
@@ -323,6 +325,10 @@ button {
 
     #game-board {
         width: 70%;
+    }
+
+    #rules {
+        padding: 20px;
     }
 
     .card-image {
@@ -370,11 +376,11 @@ button {
     }
 
     .title-rules {
-        font-size: 4rem;
+        font-size: 3.4rem;
     }
 
     .text-topic {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     body {
@@ -410,6 +416,18 @@ button {
         height: 130px;
     }
 
+    .title-rules {
+        font-size: 3rem;
+    }
+
+    .text-topic {
+        font-size: 2.1rem;
+    }
+
+    body {
+        font-size: 1.1rem;
+    }
+
     .alert-message {
         width: 300px;
         height: 300px;
@@ -434,16 +452,20 @@ button {
         padding: 10px;
     }
 
+    #rules {
+        padding: 30px;
+    }
+
     .card-image {
         height: 130px;
     }
 
     .title-rules {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .text-topic {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     body {
@@ -472,20 +494,16 @@ button {
         height: 130px;
     }
 
-    /* #rules {
-        padding: 30px;
-    } */
-
     .title-rules {
-        font-size: 3.3rem;
+        font-size: 3rem;
     }
 
     .text-topic {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     body {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     button {
@@ -500,6 +518,10 @@ button {
 
     #game-board {
         width: 95%;
+    }
+
+    .title-rules {
+        font-size: 2.7rem;
     }
 
     .card-image {
@@ -708,7 +730,7 @@ button {
         width: 180px;
         height: 230px;
         padding-top: 50px;
-        top: 35%;
+        top: 30%;
         left: 50%;
     }
 
@@ -735,5 +757,9 @@ button {
 
     .card-image {
         height: 50px;
+    }
+
+    .alert-message {
+        top: 25%;
     }
 }

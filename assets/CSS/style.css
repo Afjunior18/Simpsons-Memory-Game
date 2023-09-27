@@ -10,12 +10,6 @@
     box-sizing: border-box;
 }
 
-/* smooth scrolling behavior to the HTML document */
-
-html {
-    scroll-behavior: smooth;
-}
-
 /* Style body */
 
 body {
@@ -77,9 +71,6 @@ li {
     align-items: center;
     background-color: blue;
     color: white;
-    /* margin-top: 10px; */
-    /* padding: 0 30px; */
-    /* border-radius: 15%; */
 }
 
 #count-container p {
@@ -163,6 +154,7 @@ button {
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 50%;
+    width: 30%;
 }
 
 /* Media query Section */
@@ -528,7 +520,7 @@ button {
 @media screen and (max-width:425px) {
 
     #game-board {
-        width: 98%;
+        width: 90%;
     }
 
     #rules {
@@ -641,7 +633,7 @@ button {
     }
 
     .card-image {
-        height: 70px;
+        height: 80px;
     }
 
     .alert-message {
@@ -670,15 +662,24 @@ button {
     }
 }
 
-/* For sreeen sizes from 280px wide */
+/* For sreeen sizes from 292px wide and down */
+@media screen and (max-width:292px) {
+
+    .card-image {
+        height: 75px;
+    }
+}
+
+
+/* For sreeen sizes from 280px wide and down */
 @media screen and (max-width:280px) {
 
     #game-board {
-        width: 97%;
+        width: 98%;
     }
 
     .card-image {
-        height: 60px;
+        height: 70px;
     }
 
     .title-rules {
@@ -718,5 +719,21 @@ button {
     .congrats-image img {
         width: 100px;
         height: 60px;
+    }
+}
+
+/* For sreeen sizes from 250px wide and down */
+@media screen and (max-width:265px) {
+
+    .card-image {
+        height: 65px;
+    }
+}
+
+/* For sreeen sizes from 250px wide */
+@media screen and (max-width:250px) {
+
+    .card-image {
+        height: 50px;
     }
 }

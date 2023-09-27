@@ -1,15 +1,16 @@
 // Wait for the page to finish loading before running any JavaScript.
-
 document.addEventListener("DOMContentLoaded", () => {
 
     //Getting references to HTML elements for later manipulation
-
     const board = document.getElementById('game-board');
     const timer = document.querySelector('#timer-count');
     const newMatch = document.getElementById('new-match');
     const wrongMatch = document.getElementById('wrong-match');
     const runGame = document.getElementById('start-game');
+    const winMessage = document.getElementById('win-message');
+    const gameOverAlert = document.getElementById('game-over-message');
     const hardButton = document.getElementById('hard-level');
+    const footer = document.getElementById('footer');
 
     // Create variable for starting a timer 
     let currentTime = 60;
@@ -111,19 +112,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ];
 
-    // Function to initiate the game on easy level.
-    // Shuffles the cards and creates the game board.
+    /**
+     * Starts an easy level game.
+     * - Hides win and game over messages.
+     * - Hides buttons for game start and difficulty selection.
+     * - Hides the footer.
+     * - Shuffles the cards and creates the game board.
+     * - Resets the game state.
+     * - Starts the game timer.
+     */
     function startEasyGame() {
-
         hideWinMessage();
         hideOverMessage();
 
-        // Hide the buttons when starts the game
         runGame.style.display = 'none';
         hardButton.style.display = 'none';
+        footer.style.display = 'none';
 
         if (!gameInProgress) {
-
             const shuffledCards = shuffleCards(cards);
             createBoard(shuffledCards);
             resetGame();
@@ -139,15 +145,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Function to initiate the game on hard level.
+    /**
+     * Starts a hard level game.
+     * - Hides win and game over messages.
+     * - Hides buttons for game start and difficulty selection.
+     * - Hides the footer.
+     * - Shuffles the cards and creates the game board.
+     * - Resets the game state.
+     * - Starts the game timer.
+     */
     function startHardGame() {
-
         hideWinMessage();
         hideOverMessage();
 
-        // Hide the buttons when starts the game
         runGame.style.display = 'none';
         hardButton.style.display = 'none';
+        footer.style.display = 'none';
 
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
@@ -163,7 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             startTimer(30);
         }
-
     }
 
     // Add eventListener click, to a level game button
@@ -183,7 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function startTimer(duration) {
         currentTime = duration;
         timeInterval = setInterval(updateTime, 1000);
-
     }
 
     function updateTime() {
@@ -197,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
             //Calling the function to show a message saying Game Over
             gameOverMessage();
             removeEventListener.cardElement('click');
-
         }
     }
 
@@ -239,15 +249,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // This function shuffles the cards array.
-    // It generates a random order of the cards for a game.
+    /**
+     * This function shuffles the cards array.
+     * It generates a random order of the cards for a game.
+     */
     function shuffleCards(cards) {
         return cards.sort(() => Math.random() - 0.5);
     }
 
     // this function create the game board.
     function createBoard(cards) {
-
         // Clear the existing content of the board element
         board.innerHTML = '';
 
@@ -271,17 +282,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     imgElement.src = 'assets/images/cover.webp';
                 }
-                // Append the image element to the card element
-                // Append the card element to the game board
-                cardElement.appendChild(imgElement);
-                board.appendChild(cardElement);
+
+                cardElement.appendChild(imgElement); // Append the image element to the card element
+                board.appendChild(cardElement); // Append the card element to the game board
             }
         });
     }
 
     // This function check matching cards
     function checkMatchingCards(cards) {
-
         // const flippedCards = cards.filter(card => card.flipped);
         if (chosenCards.length === 2) {
             const [card1, card2] = chosenCards;
@@ -312,16 +321,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 showWinMessage();
 
                 gameInProgress = false; // Game finished, stop timer
-
             }
         }
     }
 
     //Function that show a message to the user when all matches has been found
     function showWinMessage() {
-        // Get the element with the ID 'win-message' from the DOM
-        const winMessage = document.getElementById('win-message');
-
         // Check if the element was found
         if (winMessage) {
             const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds! Play again?"`;
@@ -332,9 +337,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Function that hide the win message when the game starts again
     function hideWinMessage() {
-        // Get the element with the ID 'win-message' from the DOM
-        const winMessage = document.getElementById('win-message');
-
         // Check if the element was found
         if (winMessage) {
             winMessage.style.display = 'none'; // This makes the element invisible
@@ -343,9 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Function that show a message to the user when the game is over
     function gameOverMessage() {
-        // Get the element with the ID 'game-over-message' from the DOM
-        const gameOverAlert = document.getElementById('game-over-message');
-
         // Check if the element was found
         if (gameOverAlert) {
             gameOverAlert.style.display = 'block'; // This makes the element visible
@@ -354,13 +353,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Function that hide the game over message when the game starts again
     function hideOverMessage() {
-        // Get the element with the ID 'win-message' from the DOM
-        const gameOverAlert = document.getElementById('game-over-message');
-
         // Check if the element was found
         if (gameOverAlert) {
             gameOverAlert.style.display = 'none'; // This makes the element invisible
         }
     }
-
 });

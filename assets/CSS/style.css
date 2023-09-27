@@ -154,23 +154,12 @@ footer {
 }
 
 /* Class created on function createBoard, style cards of the game */
-.card-image {
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-}
 
-/* .board-cards {
-    background-color: yellow;
-    width: 40%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.3px;
-} */
+.card-image {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
 
 /* Media query Section */
 

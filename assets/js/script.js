@@ -166,9 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // Add eventListener click to a level game button
+    // Add eventListener click, to a level game button
     document.getElementById('start-game').addEventListener("click", startEasyGame);
     document.getElementById('hard-level').addEventListener("click", startHardGame);
+
+    /**
+     * These event listeners handle the click events on the "Start Easy" and "Start Hard" buttons
+     * within the win and game over messages. To start a new game with selected difficulty level.
+     */
+    document.getElementById('win-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);
+    document.getElementById('win-message').querySelectorAll('.btn-message')[1].addEventListener("click", startHardGame);
+    document.getElementById('game-over-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);
+    document.getElementById('game-over-message').querySelectorAll('.btn-message')[1].addEventListener("click", startHardGame);
 
     // Function to set the timer according the level game choice
     function startTimer(duration) {
@@ -353,12 +362,5 @@ document.addEventListener("DOMContentLoaded", () => {
             gameOverAlert.style.display = 'none'; // This makes the element invisible
         }
     }
-
-
-    function checkGameOver() {
-
-    }
-
-
 
 });

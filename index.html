@@ -30,56 +30,51 @@
             <button class="btn-message">Start Hard</button>
         </div>
     </section>
-    <section>
-        <div class="btn-game">
-            <button id="start-game">Start / Easy</button>
-            <button id="hard-level">Start / Hard</button>
-        </div>
-    </section>
+    <!-- Buttons to start the game level-->
+    <div class="btn-game">
+        <button id="start-game">Start / Easy</button>
+        <button id="hard-level">Start / Hard</button>
+    </div>
     <!--Game and Rules Board-->
-    <section>
-        <div id="game-board" class="board-cards">
-            <div id="rules">
-                <h1 class="title-rules">The Simpsons Memory Game</h1>
-                <p class="text-topic">Objective:</p>
-                <p>
-                    The goal of the game is to have fun matching pairs of cards featuring your favorite Simpsons
-                    characters!
-                </p><br>
-                <p class="text-topic">How to Play:</p>
-                <p>
-                    Each turn, select two cards by clicking on them. If they match, they'll be removed from the
-                    board.
-                    If not, they'll flip back over, testing your memory skills.
-                </p><br>
-                <p class="text-topic">Difficulty Levels:</p>
-                <p>
-                    This game offers two levels of difficulty, Choose your challenge!
-                </p><br>
-                <ul>
-                    <li>
-                        <strong>Easy Mode:</strong> You have a generous 60 seconds to uncover all pairs. Take your
-                        time
-                        and enjoy the game!
-                    </li><br>
-                    <li>
-                        <strong>Hard Mode:</strong> For a thrilling challenge, you have only 30 seconds. Race
-                        against
-                        the timer! If you don't find all pairs in time, the
-                        game ends.
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <section id="game-board">
+        <section id="rules">
+            <h1 class="title-rules">The Simpsons Memory Game</h1>
+            <p class="text-topic">Objective:</p>
+            <p>
+                The goal of the game is to have fun matching pairs of cards featuring your favorite Simpsons
+                characters!
+            </p><br>
+            <p class="text-topic">How to Play:</p>
+            <p>
+                Each turn, select two cards by clicking on them. If they match, they'll be removed from the
+                board.
+                If not, they'll flip back over, testing your memory skills.
+            </p><br>
+            <p class="text-topic">Difficulty Levels:</p>
+            <p>
+                This game offers two levels of difficulty, Choose your challenge!
+            </p><br>
+            <ul>
+                <li>
+                    <strong>Easy Mode:</strong> You have a generous 60 seconds to uncover all pairs. Take your
+                    time
+                    and enjoy the game!
+                </li><br>
+                <li>
+                    <strong>Hard Mode:</strong> For a thrilling challenge, you have only 30 seconds. Race
+                    against
+                    the timer! If you don't find all pairs in time, the
+                    game ends.
+                </li>
+            </ul>
+        </section>
     </section>
     <!--Score Game and timer-->
-    <section>
-        <div id="score-game">
-            <div id="count-container">
-                <p class="score-timer">Timer:<span id="timer-count"> 0</span></p>
-                <p class="score-timer">Match:<span id="new-match"> 0</span></p>
-                <p class="score-timer">Ops!:<span id="wrong-match"> 0</span></p>
-            </div>
+    <section id="score-game">
+        <div id="count-container">
+            <p class="score-timer">Timer:<span id="timer-count"> 0</span></p>
+            <p class="score-timer">Match:<span id="new-match"> 0</span></p>
+            <p class="score-timer">Ops!:<span id="wrong-match"> 0</span></p>
         </div>
     </section>
     <!--Footer-->

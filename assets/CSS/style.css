@@ -147,20 +147,24 @@ button {
     color: white;
     font-size: 0.8rem;
     letter-spacing: 1px;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    margin-left: 20px;
 }
 
 /* Class created on function createBoard, style cards of the game */
 
 .card-image {
     cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 50%;
 }
 
 .card-image:hover {
     border: 2px solid blue;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Animation Section */

@@ -795,7 +795,7 @@ footer a {
     }
 }
 
-/* For sreeen sizes from 250px wide */
+/* For sreeen sizes from 250px wide and down */
 @media screen and (max-width:250px) {
 
     .card-image {
@@ -804,5 +804,18 @@ footer a {
 
     .alert-message {
         top: 25%;
+    }
+}
+
+/* For sreeen sizes from 204px wide and down */
+@media screen and (max-width:204px) {
+
+    .card-image {
+        height: 40px;
+    }
+
+    .alert-message {
+        top: 22%;
+        left: 45%;
     }
 }

@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             timer.textContent = '60' + 's';
 
-            //Iniate the game with 0 on counter.
             newMatch.textContent = '0';
             wrongMatch.textContent = '0';
 
@@ -171,7 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             timer.textContent = '30' + 's';
 
-            //Iniate the game with 0 on counter.
             newMatch.textContent = '0';
             wrongMatch.textContent = '0';
 
@@ -183,30 +181,34 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('start-game').addEventListener("click", startEasyGame);
     document.getElementById('hard-level').addEventListener("click", startHardGame);
 
-    /**
-     * These event listeners handle the click events on the "Start Easy" and "Start Hard" buttons
-     * within the win and game over messages. To start a new game with selected difficulty level.
-     */
+    // Event listeners for starting a new game with selected difficulty level
     document.getElementById('win-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);
     document.getElementById('win-message').querySelectorAll('.btn-message')[1].addEventListener("click", startHardGame);
     document.getElementById('game-over-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);
     document.getElementById('game-over-message').querySelectorAll('.btn-message')[1].addEventListener("click", startHardGame);
 
 
-    /**
-     * Event listener for the "Home/Rules" button.
-     * Reloads the current page, effectively taking the user back to the home page.
-     */
+    // Adding an event listener to the "Home/Rules" button for page refresh
     btnRules.addEventListener('click', function () {
         window.location.reload();
     });
 
-    // Function to set the timer according the level game choice
+    /**
+     * Starts the game timer with the specified duration.
+     * Updates the timer every second.
+     */
     function startTimer(duration) {
         currentTime = duration;
         timeInterval = setInterval(updateTime, 1000);
     }
 
+    /**
+     * Updates the game timer every second.
+     * If the game is in progress and there is remaining time, it decrements the current time
+     * and updates the timer display.
+     * If the time reaches zero, it stops the timer, sets the game to not in progress,
+     * and triggers the game over message.
+     */
     function updateTime() {
         if (gameInProgress && currentTime > 0) {
             currentTime--;
@@ -215,18 +217,31 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(timeInterval);
             gameInProgress = false;
 
-            //Calling the function to show a message saying Game Over
             gameOverMessage();
             // removeEventListener.cardElement('click');
         }
     }
 
+    /**
+     * Resets the game timer.
+     * Clears the time interval and sets the current time back to the starting value.
+     * Updates the timer display with the new time.
+     */
     function resetTimer() {
         clearInterval(timeInterval);
         currentTime = 60;
         timer.textContent = currentTime;
     }
 
+    /**
+     * Resets the game state to start a new game.
+     * - Flips all cards back to face down.
+     * - Resets matching status and found status for each card.
+     * - Clears the chosenCards array.
+     * - Recreates the game board.
+     * - Hides win and game over messages.
+     * - Resets the game timer.
+     */
     function resetGame() {
         cards.forEach(card => {
             card.flipped = false;
@@ -241,18 +256,23 @@ document.addEventListener("DOMContentLoaded", () => {
         resetTimer();
     }
 
-    // This function flips a card and updates the game board
+    /**
+     * Flips a card and updates the game board.
+     * - Checks if the game is in progress before allowing card flip.
+     * - Checks if the card is not already flipped and if less than 2 cards have been flipped.
+     * - Marks the card as flipped.
+     * - Adds the card to the chosenCards array.
+     * - Updates the game board.
+     * - Waits for 1 second before checking for a match if two cards have been chosen.
+     */
     function flipCard(card, cards) {
-        // If the game is not in progessing, user will not be able to click on the card
         if (!gameInProgress) return;
 
-        // Check is the card is not flipped and if we have flipped less than 2 cards
         if (chosenCards.length < 2 && !card.flipped && !card.matched) {
-            card.flipped = true; // Mark the card as flipped
-            chosenCards.push(card); // Add the card to flipped cards
+            card.flipped = true;
+            chosenCards.push(card);
             createBoard(cards);
 
-            // After chosen 2 cards, wait for 1 second before checking for match
             if (chosenCards.length === 2) {
                 setTimeout(checkMatchingCards, 1000, cards);
             }
@@ -267,105 +287,126 @@ document.addEventListener("DOMContentLoaded", () => {
         return cards.sort(() => Math.random() - 0.5);
     }
 
-    // this function create the game board.
+    /**
+     * Creates the game board.
+     * - Clears the existing content of the board element.
+     * - Loops through each card in the array.
+     * - Creates a card element and an image element.
+     * - Adds a class to the image element for styling CSS.
+     * - Adds an event listener to flip the card when clicked.
+     * - Sets the image source based on the card state (found, flipped, or face down).
+     * - Appends the image element to the card element.
+     * - Appends the card element to the game board.
+     */
     function createBoard(cards) {
-        // Clear the existing content of the board element
         board.innerHTML = '';
 
-        // Loop through each card in the array
         cards.forEach(card => {
             if (!card.matched || card.found) {
                 const cardElement = document.createElement('div');
                 const imgElement = document.createElement('img');
 
-                // Adds a class to the image element for styling CSS
                 imgElement.classList.add('card-image');
 
-                // Adds an event listener to flip the card when clicked
                 cardElement.addEventListener('click', () => {
-                    flipCard(card, cards); // calling function flipCard
+                    flipCard(card, cards);
                 });
                 if (card.found) {
                     imgElement.src = 'assets/images/blue-check.png';
-                } else if (card.flipped) { // Check if the card is flipped (face up) or not (face down)
+                } else if (card.flipped) {
                     imgElement.src = card.img;
                 } else {
                     imgElement.src = 'assets/images/cover.webp';
                 }
 
-                cardElement.appendChild(imgElement); // Append the image element to the card element
-                board.appendChild(cardElement); // Append the card element to the game board
+                cardElement.appendChild(imgElement);
+                board.appendChild(cardElement);
             }
         });
     }
 
-    // This function check matching cards
+    /**
+     * Checks if the chosen cards form a match.
+     * - Compares the names of the two chosen cards.
+     * - If they match, sets them as matched and found.
+     * - Updates the score
+     * - If all cards are matched, displays win message and stops the game timer.
+     */
     function checkMatchingCards(cards) {
-        // const flippedCards = cards.filter(card => card.flipped);
         if (chosenCards.length === 2) {
             const [card1, card2] = chosenCards;
 
             if (card1.name === card2.name) {
-                // Cards are match
+
                 card1.matched = true;
                 card2.matched = true;
                 card1.found = true;
                 card2.found = true;
 
-                // Increment 1 for every new match 
                 newMatch.textContent = Number(newMatch.textContent) + 1;
 
             } else {
                 card1.flipped = false;
                 card2.flipped = false;
 
-                // Increment 1 for every unmacth cards
                 wrongMatch.textContent = Number(wrongMatch.textContent) + 1;
             }
 
-            chosenCards.length = 0; // Clear the array of cards chosen.
-            createBoard(cards); // Update the Board
+            chosenCards.length = 0;
+            createBoard(cards);
 
             if (cards.every(card => card.matched)) {
-
                 showWinMessage();
 
-                gameInProgress = false; // Game finished, stop timer
+                gameInProgress = false;
             }
         }
     }
 
-    //Function that show a message to the user when all matches has been found
+    /**
+     * Displays a congratulation message when all matches are found.
+     * - Constructs a message with the time taken to complete the game.
+     * - Updates the message in the winMessage element.
+     * - Makes the winMessage element visible.
+     */
     function showWinMessage() {
-        // Check if the element was found
         if (winMessage) {
             const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds! Play again?"`;
             winMessage.querySelector('h2').textContent = timerInfo;
-            winMessage.style.display = 'block'; // This makes the element visible
+            winMessage.style.display = 'block';
         }
     }
 
-    //Function that hide the win message when the game starts again
+    /**
+     * Hides the win message when the game starts again.
+     * - Checks if the winMessage element was found.
+     * - Makes the winMessage element invisible.
+     */
     function hideWinMessage() {
-        // Check if the element was found
         if (winMessage) {
-            winMessage.style.display = 'none'; // This makes the element invisible
+            winMessage.style.display = 'none';
         }
     }
 
-    //Function that show a message to the user when the game is over
+    /**
+     * Shows a message to the user when the game is over.
+     * - Checks if the gameOverAlert element was found.
+     * - Makes the gameOverAlert element visible.
+     */
     function gameOverMessage() {
-        // Check if the element was found
         if (gameOverAlert) {
-            gameOverAlert.style.display = 'block'; // This makes the element visible
+            gameOverAlert.style.display = 'block';
         }
     }
 
-    //Function that hide the game over message when the game starts again
+    /**
+     * Hides the game over message when the game starts again.
+     * - Checks if the gameOverAlert element was found.
+     * - Makes the gameOverAlert element invisible.
+     */
     function hideOverMessage() {
-        // Check if the element was found
         if (gameOverAlert) {
-            gameOverAlert.style.display = 'none'; // This makes the element invisible
+            gameOverAlert.style.display = 'none';
         }
     }
 });

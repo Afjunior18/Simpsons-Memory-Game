@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const gameOverAlert = document.getElementById('game-over-message');
     const hardButton = document.getElementById('hard-level');
     const footer = document.getElementById('footer');
+    const btnRules = document.getElementById('btn-rules');
 
     // Create variable for starting a timer 
     let currentTime = 60;
@@ -191,6 +192,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('game-over-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);
     document.getElementById('game-over-message').querySelectorAll('.btn-message')[1].addEventListener("click", startHardGame);
 
+
+    /**
+     * Event listener for the "Home/Rules" button.
+     * Reloads the current page, effectively taking the user back to the home page.
+     */
+    btnRules.addEventListener('click', function () {
+        window.location.reload();
+    });
+
     // Function to set the timer according the level game choice
     function startTimer(duration) {
         currentTime = duration;
@@ -207,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             //Calling the function to show a message saying Game Over
             gameOverMessage();
-            removeEventListener.cardElement('click');
+            // removeEventListener.cardElement('click');
         }
     }
 

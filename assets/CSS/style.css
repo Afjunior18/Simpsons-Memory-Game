@@ -35,6 +35,10 @@ h2 {
     font-size: 1rem;
 }
 
+p {
+    margin-bottom: 10px;
+}
+
 .sub-titles {
     font-size: 2rem;
     margin: 20px auto;
@@ -68,7 +72,7 @@ h2 {
     width: fit-content;
     display: flex;
     height: fit-content;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -109,6 +113,12 @@ button {
     border-radius: 25%;
 }
 
+#btn-rules {
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 5px;
+}
+
 /* Classes to style titles and topics */
 
 .title-rules {
@@ -116,6 +126,7 @@ button {
     text-align: center;
     font-size: 3rem;
     color: blue;
+    padding-top: 10px;
     animation: bounce 4s;
 }
 
@@ -201,7 +212,8 @@ footer a {
 
 /* Animation to buttons */
 
-.btn-game button {
+.btn-game,
+button {
     transition: transform 0.2s ease-in-out;
 }
 
@@ -629,6 +641,15 @@ footer a {
 
     #count-container {
         padding: 0;
+    }
+
+    #score-game {
+        flex-direction: column;
+    }
+
+    #btn-rules {
+        margin-top: 7px;
+        font-size: 0.6rem;
     }
 }
 

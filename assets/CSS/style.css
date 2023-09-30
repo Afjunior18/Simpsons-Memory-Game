@@ -26,6 +26,12 @@ body {
     flex-direction: column;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Caveat', cursive;
+}
+
 li {
     list-style-type: none;
     margin-top: 7px;
@@ -122,7 +128,6 @@ button {
 /* Classes to style titles and topics */
 
 .title-rules {
-    font-family: 'Caveat', cursive;
     text-align: center;
     font-size: 3rem;
     color: blue;
@@ -131,7 +136,6 @@ button {
 }
 
 .text-topic {
-    font-family: 'Caveat', cursive;
     font-size: 2rem;
     color: blue;
 }

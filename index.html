@@ -17,22 +17,20 @@
 
 <body>
     <!--Win and Game Over message box-->
-    <section>
-        <div id="win-message" class="alert-message congrats-image">
-            <img src="assets/images/back-card.png" alt="Heads of Simpsons characters">
-            <p>Congratulations!</p>
-            <br>
-            <button class="btn-message">Start Easy</button>
-            <button class="btn-message">Start Hard</button>
-        </div>
-        <div id="game-over-message" class="alert-message game-over-image">
-            <img src="assets/images/game-over-message.webp" alt="Homer and Bart Simpson">
-            <p>Game Over! - Wanna try again?</p>
-            <br>
-            <button class="btn-message">Start Easy</button>
-            <button class="btn-message">Start Hard</button>
-        </div>
-    </section>
+    <div id="win-message" class="alert-message congrats-image">
+        <img src="assets/images/back-card.png" alt="Heads of Simpsons characters">
+        <p>Congratulations!</p>
+        <br>
+        <button class="btn-message">Start Easy</button>
+        <button class="btn-message">Start Hard</button>
+    </div>
+    <div id="game-over-message" class="alert-message game-over-image">
+        <img src="assets/images/game-over-message.webp" alt="Homer and Bart Simpson">
+        <p>Game Over! - Wanna try again?</p>
+        <br>
+        <button class="btn-message">Start Easy</button>
+        <button class="btn-message">Start Hard</button>
+    </div>
     <!-- Buttons to start the game level-->
     <div class="btn-game">
         <button id="start-game">Start / Easy</button>
@@ -73,16 +71,17 @@
         </section>
     </section>
     <!--Score Game and timer-->
-    <section id="score-game">
+    <div id="score-game">
         <div id="count-container">
             <p class="score-timer">Timer:<span id="timer-count"> 0</span></p>
             <p class="score-timer">Match:<span id="new-match"> 0</span></p>
             <p class="score-timer">Ops!:<span id="wrong-match"> 0</span></p>
         </div>
-    </section>
+    </div>
     <!--Footer-->
     <footer id="footer">
-        © 2023 Copyright Created By Amaury Junior<a href="https://github.com/Afjunior18" target="_blank" rel="noopener noreferrer" aria-label="My profile on GitHub"><i class="fab fa-github"></i></a>
+        © 2023 Copyright Created By Amaury Junior<a href="https://github.com/Afjunior18" target="_blank"
+            rel="noopener noreferrer" aria-label="My profile on GitHub"><i class="fab fa-github"></i></a>
     </footer>
     <!-- This script loads the JavaScript file that controls the game -->
     <script src="assets/js/script.js"></script>

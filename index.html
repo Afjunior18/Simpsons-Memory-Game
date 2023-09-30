@@ -17,20 +17,20 @@
 
 <body>
     <!--Win and Game Over message box-->
-    <div id="win-message" class="alert-message congrats-image">
-        <img src="assets/images/back-card.png" alt="Heads of Simpsons characters">
-        <p>Congratulations!</p>
-        <br>
-        <button class="btn-message">Start Easy</button>
-        <button class="btn-message">Start Hard</button>
-    </div>
-    <div id="game-over-message" class="alert-message game-over-image">
-        <img src="assets/images/game-over-message.webp" alt="Homer and Bart Simpson">
-        <p>Game Over! - Wanna try again?</p>
-        <br>
-        <button class="btn-message">Start Easy</button>
-        <button class="btn-message">Start Hard</button>
-    </div>
+    <section>
+        <div id="win-message" class="alert-message congrats-image">
+            <img src="assets/images/back-card.png" alt="Heads of Simpsons characters">
+            <h2 class="sub-titles">Congratulations!</h2>
+            <button class="btn-message">Start Easy</button>
+            <button class="btn-message">Start Hard</button>
+        </div>
+        <div id="game-over-message" class="alert-message game-over-image">
+            <img src="assets/images/game-over-message.webp" alt="Homer and Bart Simpson">
+            <h2 class="sub-titles">Game Over! - Wanna try again?</h2>
+            <button class="btn-message">Start Easy</button>
+            <button class="btn-message">Start Hard</button>
+        </div>
+    </section>
     <!-- Buttons to start the game level-->
     <div class="btn-game">
         <button id="start-game">Start / Easy</button>
@@ -48,8 +48,7 @@
             <p class="text-topic">How to Play:</p>
             <p>
                 Each turn, select two cards by clicking on them. If they match, they'll be removed from the
-                board.
-                If not, they'll flip back over, testing your memory skills.
+                board. If not, they'll flip back over, testing your memory skills.
             </p><br>
             <p class="text-topic">Difficulty Levels:</p>
             <p>
@@ -58,14 +57,11 @@
             <ul>
                 <li>
                     <strong>Easy Mode:</strong> You have a generous 60 seconds to uncover all pairs. Take your
-                    time
-                    and enjoy the game!
+                    time and enjoy the game!
                 </li>
                 <li>
                     <strong>Hard Mode:</strong> For a thrilling challenge, you have only 30 seconds. Race
-                    against
-                    the timer! If you don't find all pairs in time, the
-                    game ends.
+                    against the timer! If you don't find all pairs in time, the game ends.
                 </li>
             </ul>
         </section>
@@ -80,8 +76,7 @@
     </div>
     <!--Footer-->
     <footer id="footer">
-        © 2023 Copyright Created By Amaury Junior<a href="https://github.com/Afjunior18" target="_blank"
-            rel="noopener noreferrer" aria-label="My profile on GitHub"><i class="fab fa-github"></i></a>
+        © 2023 Copyright Created By Amaury Junior<a href="https://github.com/Afjunior18" target="_blank" rel="noopener noreferrer" aria-label="My profile on GitHub"><i class="fab fa-github"></i></a>
     </footer>
     <!-- This script loads the JavaScript file that controls the game -->
     <script src="assets/js/script.js"></script>

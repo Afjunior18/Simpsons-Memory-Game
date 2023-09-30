@@ -31,6 +31,15 @@ li {
     margin-top: 7px;
 }
 
+h2 {
+    font-size: 1rem;
+}
+
+.sub-titles {
+    font-size: 2rem;
+    margin: 20px auto;
+}
+
 /* Game Board section */
 
 #game-board {
@@ -85,7 +94,7 @@ li {
 .btn-game {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin: 30px 0 10px;
 }
 
 button {
@@ -107,6 +116,7 @@ button {
     text-align: center;
     font-size: 3rem;
     color: blue;
+    animation: bounce 4s;
 }
 
 .text-topic {
@@ -128,13 +138,14 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     text-align: center;
     border-radius: 5%;
+    height: fit-content;
 }
 
 .btn-message {
     width: fit-content;
     height: fit-content;
     font-size: 0.7rem;
-    padding: 5px;
+    padding: 15px;
 }
 
 /* Footer */
@@ -188,10 +199,6 @@ footer a {
     }
 }
 
-.title-rules {
-    animation: bounce 4s;
-}
-
 /* Animation to buttons */
 
 .btn-game button {
@@ -210,6 +217,10 @@ footer a {
     #game-board {
         width: 55%;
         align-items: center;
+    }
+
+    .sub-titles {
+        font-size: 3rem;
     }
 
     .card-image {
@@ -242,7 +253,7 @@ footer a {
 
     .alert-message {
         width: 900px;
-        height: 500px;
+        /* height: 500px; */
         top: 20%;
     }
 
@@ -275,6 +286,11 @@ footer a {
 /* For sreeen sizes from 2560px wide and down */
 @media screen and (max-width:2560px) {
 
+
+    .sub-titles {
+        font-size: 2rem;
+    }
+
     .text-topic {
         font-size: 4rem;
     }
@@ -285,7 +301,7 @@ footer a {
 
     .alert-message {
         width: 700px;
-        height: 480px;
+        /* height: 480px; */
         top: 30%;
     }
 }
@@ -321,6 +337,10 @@ footer a {
         width: 400px;
 
     }
+
+    .btn-message {
+        font-size: 1.5rem;
+    }
 }
 
 /* For sreeen sizes from 2000px wide and down */
@@ -351,10 +371,6 @@ footer a {
     .alert-message {
         width: 500px;
         top: 25%;
-    }
-
-    .btn-message {
-        font-size: 1.5rem;
     }
 
     .game-over-image img {
@@ -398,11 +414,15 @@ footer a {
 
     .alert-message {
         width: 400px;
-        height: 400px
+        /* height: 400px */
     }
 
     .btn-message {
         font-size: 1.3rem;
+    }
+
+    .sub-titles {
+        font-size: 1.5rem;
     }
 }
 
@@ -438,12 +458,13 @@ footer a {
 
     .alert-message {
         width: 350px;
-        height: 350px;
+        /* height: 350px; */
         padding: 15px;
     }
 
     .btn-message {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 7px;
     }
 
     .game-over-image img {
@@ -473,17 +494,21 @@ footer a {
 
     .alert-message {
         width: 300px;
-        height: 300px;
+        /* height: 300px; */
         top: 35%;
     }
 
     .btn-message {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .game-over-image img {
         width: 200px;
         height: 140px;
+    }
+
+    .sub-titles {
+        font-size: 1rem;
     }
 }
 
@@ -519,10 +544,6 @@ footer a {
         width: 140px;
         height: 40px;
         font-size: 1.1rem;
-    }
-
-    .btn-message {
-        font-size: 0.9rem;
     }
 }
 
@@ -572,12 +593,8 @@ footer a {
     }
 
     .alert-message {
-        height: 270px;
+        /* height: 270px; */
         top: 30%;
-    }
-
-    .btn-message {
-        font-size: 0.7rem;
     }
 }
 
@@ -637,10 +654,6 @@ footer a {
     body {
         font-size: 0.7rem;
     }
-
-    /* #rules {
-        padding: 20px;
-    } */
 }
 
 /* For sreeen sizes from 375px wide and down */
@@ -665,10 +678,6 @@ footer a {
     body {
         font-size: 0.65rem;
     }
-
-    /* #rules {
-        padding: 15px;
-    } */
 
     button {
         width: 70px;
@@ -703,12 +712,13 @@ footer a {
 
     .alert-message {
         width: 200px;
-        height: 220px;
+        /* height: 220px; */
         padding-top: 30px;
     }
 
     .btn-message {
         font-size: 0.6rem;
+        padding: 4px;
     }
 
     .congrats-image img {
@@ -759,10 +769,6 @@ footer a {
         font-size: 0.62rem;
     }
 
-    /* #rules {
-        padding: 12px;
-    } */
-
     button {
         width: 60px;
         height: 20px;
@@ -771,8 +777,8 @@ footer a {
 
     .alert-message {
         width: 180px;
-        height: 230px;
-        padding-top: 50px;
+        /* height: 230px; */
+        padding-top: 30px;
         top: 30%;
         left: 50%;
     }
@@ -815,7 +821,7 @@ footer a {
     }
 
     .alert-message {
-        top: 22%;
+        top: 20%;
         left: 45%;
     }
 }

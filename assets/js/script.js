@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Check if the element was found
         if (winMessage) {
             const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds! Play again?"`;
-            winMessage.querySelector('p').textContent = timerInfo;
+            winMessage.querySelector('h2').textContent = timerInfo;
             winMessage.style.display = 'block'; // This makes the element visible
         }
     }

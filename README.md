@@ -122,7 +122,7 @@ A timer keeps track of the time taken to complete the game, providing an additio
 - GitHub: Used for website deployment.
 - Font Awesome: A library of icons and symbols used for the webpage.
 - Google Fonts: Imported fonts for the website.
--Images
+- Images
   - Shutterstock
   - Wallpapers
   - All-Free-Download

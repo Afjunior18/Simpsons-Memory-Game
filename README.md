@@ -23,7 +23,7 @@ Testing: The game presents a prominent "Start Game" button, providing a straight
 
 - Choose Your Challenge: As a new user, I want the option to select between different difficulty levels so I can tailor the game to my preference and skill level.
 
-Testing: The game offers two distinct difficulty levels - "Easy" and "Hard". Each level is clearly labeled with an appropriate description to help users make an informed choice. (docs/ux-01.png) 
+Testing: The game offers two distinct difficulty levels - "Easy" and "Hard". Each level is clearly labeled with an appropriate description to help users make an informed choice. ![Start Button and Game Objective](docs/ux-01.png)
 
 ### Returning User
 
@@ -31,4 +31,4 @@ Testing: The game offers two distinct difficulty levels - "Easy" and "Hard". Eac
 
 - Quick Restart: As a returning user, I want the ability to swiftly start a new game without unnecessary steps, providing a good gaming experience.
 
-Testing: The game provides a "Start/Easy and Start/Hard" button that allows users to instantly initiate a new game, maintaining the flow of gameplay without interruptions. (docs/ux-05.png) (docs/ux-06.png)
+Testing: The game provides a "Start/Easy and Start/Hard" button that allows users to instantly initiate a new game, maintaining the flow of gameplay without interruptions.![Start a new game](docs/ux-05.png) ![Start a new game](docs/ux-06.png)

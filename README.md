@@ -142,3 +142,62 @@ A timer keeps track of the time taken to complete the game, providing an additio
 - This memory game tutorial was instrumental in kickstarting the development of my project and greatly aided in understanding the creation of the game board, which proved to be the most challenging part of the project.<https://www.youtube.com/watch?v=0SeqdHCBYVo>
 
 - Memory Game Tutorial: This tutorial was a crucial source of guidance and inspiration throughout the development process. It provided detailed instructions and practical examples that were essential for the successful implementation of the memory game.<https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/>
+
+## Testing
+
+### HTML Validation
+
+- <https://validator.w3.org/>
+
+![HTML Validation](docs/validator-html.png)
+
+### CSS Validation
+
+- <https://jigsaw.w3.org/css-validator/>
+
+![CSS Validation](docs/validator-css.png)
+
+### Lighthouse tool
+
+I used Lighthouse in DevTools to assess and optimize the performance, accessibility, best practices and SEO.
+
+- **Desktop - Index.html**
+
+![Desktop index.html](docs/desktop-performance.png)
+
+- **Mobile - Index.html**
+
+![Desktop index.html](docs/desktop-performance.png)
+
+### Wave Validation
+
+- I used the WAVE (Web Accessibility Evaluation Tool) validation to ensure that our website adheres to accessibility standards and guidelines.
+
+![Wave Validation](docs/validator-wave-01.png)
+
+## Debug and Issues
+
+- Issue: Dynamic Board Size
+Description: Initially, the game board size would shrink as pairs were matched and removed, resulting in a dynamically changing play area.
+
+**Resolution**: To address this, a static image representing all matched pairs was used. This ensured a consistent board size throughout the game.
+
+- Issue: Styling Alert Messages
+Description: Styling alert messages proved challenging. The decision was made to create a custom function for displaying messages with desired styles. However, a new issue arose where the win message remained visible on the board after starting a new game.
+
+**Resolution**: To fix this, a function was implemented to hide the win message whenever a new game was initiated, regardless of the chosen difficulty level.
+
+- Issue: Border Artifact on Initial Card Click
+Description: When starting the first game and clicking on cards, a minor artifact appeared as a faint black border in the middle of the cards. Various attempts were made to rectify the issue.
+![Black Border](docs/error-click-image.png)
+
+- Attempts:
+  - Verified image and container sizes.
+![Verified image properties](docs/error-click-image-unicorn.png)
+  - Adjusted spacing between each div on the board using the Unicorn Revealer tool, a Google Chrome extension.
+![Adjust image properties](docs/adjust-image.png)
+
+- Initially applied a border-radius: 50% to each card, but observed that it exacerbated the black border issue, prompting the removal of this property.
+![Removal border radius](docs/removal-border-radius.png)
+
+Result: While the mentioned adjustments led to a significant improvement, a slight border artifact still persisted on the initial clicks of each game. Further investigation is required for a complete resolution.

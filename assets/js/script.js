@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Adding an event listener to the "Home/Rules" button for page refresh
-    btnRules.addEventListener('click', function () {
+    btnRules.addEventListener('click', function() {
         window.location.reload();
     });
 
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     function showWinMessage() {
         if (winMessage) {
-            const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds! Play again?"`;
+            const timerInfo = `Congrats!! You found all the pairs in "${60 - currentTime} seconds!" Play again?`;
             winMessage.querySelector('h2').textContent = timerInfo;
             winMessage.style.display = 'block';
         }

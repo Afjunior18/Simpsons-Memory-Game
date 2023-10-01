@@ -105,3 +105,40 @@ A timer keeps track of the time taken to complete the game, providing an additio
 - Game Controls: Includes buttons for starting the game, selecting difficulty levels, and accessing rules. These controls enhance user interaction and provide options for customization.
 
 - Responsive Design: The game is designed to be accessible and enjoyable on various devices, including desktops, tablets, and mobile phones. This ensures a seamless experience for all players.
+
+- Favicon: A custom favicon has been added to enhance the user experience. This small but noticeable detail adds a personalized touch to the browser tab. ![Favicon](assets/favicon/favicon-32x32.png)
+
+## Technologies Used
+
+### Languages Used
+
+- HTML
+- CSS
+- JavaScript
+
+### Frameworks, Libraries, and Programs
+
+- Balsamiq: Used for creating wireframes.
+- GitHub: Used for website deployment.
+- Font Awesome: A library of icons and symbols used for the webpage.
+- Google Fonts: Imported fonts for the website.
+-Images
+  - Shutterstock
+  - Wallpapers
+  - All-Free-Download
+- Paint: Used to edit screenshots and convert image extensions for the readme file.
+- Am I Responsive: Used to check how the website responds on various screens.
+- Chrome Dev Tools: Frequently used to experiment with code and preview on different screens.
+- TinyPNG: Used for compressing and optimizing images to improve performance.
+- Simple Image Resizer: Used for resizing images. <https://www.simpleimageresizer.com/>
+- Animate.css: Used for animations.
+- W3Schools CSS3 Animations: Used for creating animations, especially for titles.
+- Favicon.io: Used for creating the favicon.
+
+### Tutorials and Inspirations
+
+- Countdown Timer Tutorial: Provided guidance on implementing the timer/countdown feature. <https://www.youtube.com/watch?v=PIiMSMz7KzM>
+
+- This memory game tutorial was instrumental in kickstarting the development of my project and greatly aided in understanding the creation of the game board, which proved to be the most challenging part of the project.<https://www.youtube.com/watch?v=0SeqdHCBYVo>
+
+- Memory Game Tutorial: This tutorial was a crucial source of guidance and inspiration throughout the development process. It provided detailed instructions and practical examples that were essential for the successful implementation of the memory game.<https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/>

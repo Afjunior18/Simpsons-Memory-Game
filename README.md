@@ -135,6 +135,7 @@ A timer keeps track of the time taken to complete the game, providing an additio
 - Animate.css: Used for animations.
 - W3Schools CSS3 Animations: Used for creating animations, especially for titles.
 - Favicon.io: Used for creating the favicon.
+- Icons: A comprehensive library of icons and symbols. <https://fontawesome.com/>
 
 ### Tutorials and Inspirations
 
@@ -226,3 +227,15 @@ Description: When starting the first game and clicking on cards, a minor artifac
 10.Share the Link: Share the provided link with others.
 
 Explore the Deployed Website: Visit the live site by clicking on the following link: <https://afjunior18.github.io/Simpsons-Memory-Game/>
+
+## Credits
+
+A big shoutout to the following resources that played a pivotal role in the completion of this project:
+
+- Countdown Timer Tutorial: Provided invaluable guidance on implementing the timer/countdown feature. <https://www.youtube.com/watch?v=PIiMSMz7KzM>
+
+- Memory Game Tutorial (YouTube): This tutorial jumpstarted the development of my project and significantly aided in understanding the creation of the game board, which proved to be the most challenging aspect. <https://www.youtube.com/watch?v=0SeqdHCBYVo>
+
+- Memory Game Tutorial (Marina Ferreira): This tutorial served as a crucial source of guidance and inspiration throughout the development process. It provided detailed instructions and practical examples that were essential for the successful implementation of the memory game. <https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/>
+
+- A big thanks to my mentor, David Bowers, for his invaluable feedback and guidance. His insights were key in improving the final project.

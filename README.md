@@ -86,4 +86,22 @@ Messages: Messages like "Game Over" and "You Win" provide feedback to the user b
 
 To plan the game's layout and functionality, I utilized the Balsamiq tool to create a wireframe. This served as a preliminary visual representation.These elements combined to form an engaging and user-friendly game centered around The Simpsons theme.
 ![Desktop Wireframe]()
+![Tablet Wireframe]()
 ![Mobile Wireframe]()
+
+## Features
+
+- Game Board: The central element of the game, where players interact with cards featuring characters from The Simpsons. It provides an engaging experience for users to find matching pairs.
+
+- Difficulty Levels: Users can choose between "Easy" and "Hard" levels to adjust the game's challenge, offering options for different player preferences.
+
+- Timer and Statistics:
+A timer keeps track of the time taken to complete the game, providing an additional layer of challenge. Players can also see statistics like the number of successful matches and incorrect attempts.
+
+- Start and Restart Buttons: Buttons like "Start Game" and "Hard Level" allow users to initiate and adjust the difficulty level of the game. Additionally, a "New Match" button enables players to quickly start a new game.
+
+- Win and Game Over Messages: Feedback messages notify users of their game outcome, creating a satisfying experience upon winning and providing encouragement after an unsuccessful attempt.
+
+- Game Controls: Includes buttons for starting the game, selecting difficulty levels, and accessing rules. These controls enhance user interaction and provide options for customization.
+
+- Responsive Design: The game is designed to be accessible and enjoyable on various devices, including desktops, tablets, and mobile phones. This ensures a seamless experience for all players.

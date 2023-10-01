@@ -9,7 +9,7 @@ Target Audience: Fans of "The Simpsons" Who want to engage with their favorite c
 
 ![Responsiveness](docs/responsive-01.png)
 
-[**Live Website: The Simpsons Memory Game**] (<https://afjunior18.github.io/Simpsons-Memory-Game/>)
+**Live Website: The Simpsons Memory Game** (<https://afjunior18.github.io/Simpsons-Memory-Game/>)
 
 ## Content
 
@@ -73,7 +73,7 @@ The game layout is designed to provide an intuitive and enjoyable experience for
 Game Board: This is the main area where players interact with the cards and try to find matching pairs.
 ![The Game Board](docs/ux-03.png)
 
-Game Controls: Buttons like "Start Game" and "Hard Level" allow users to initiate and adjust the difficulty level of the game.
+Game Controls: Buttons like "Start/Easy" and "Start/Hard" allow users to initiate and adjust the difficulty level of the game.
 ![Start Game](docs/ux-01.png)
 
 Timer and Statistics: The game displays a timer to track the time taken to complete the game, as well as statistics like the number of successful matches and incorrect attempts.
@@ -131,6 +131,7 @@ A timer keeps track of the time taken to complete the game, providing an additio
 - Chrome Dev Tools: Frequently used to experiment with code and preview on different screens.
 - TinyPNG: Used for compressing and optimizing images to improve performance.
 - Simple Image Resizer: Used for resizing images. <https://www.simpleimageresizer.com/>
+- Unicorn Revealer: Chrome extension for debugging layout issues and visualizing hidden properties on webpages.
 - Animate.css: Used for animations.
 - W3Schools CSS3 Animations: Used for creating animations, especially for titles.
 - Favicon.io: Used for creating the favicon.
@@ -167,7 +168,7 @@ I used Lighthouse in DevTools to assess and optimize the performance, accessibil
 
 - **Mobile - Index.html**
 
-![Desktop index.html](docs/desktop-performance.png)
+![Desktop index.html](docs/mobile-performance.png)
 
 ### Wave Validation
 
@@ -192,12 +193,36 @@ Description: When starting the first game and clicking on cards, a minor artifac
 ![Black Border](docs/error-click-image.png)
 
 - Attempts:
-  - Verified image and container sizes.
+  - Verified image and container sizes using the Unicorn Revealer tool, a Google Chrome extension.
 ![Verified image properties](docs/error-click-image-unicorn.png)
-  - Adjusted spacing between each div on the board using the Unicorn Revealer tool, a Google Chrome extension.
+  - Adjusted spacing between each div on the board.
 ![Adjust image properties](docs/adjust-image.png)
 
 - Initially applied a border-radius: 50% to each card, but observed that it exacerbated the black border issue, prompting the removal of this property.
 ![Removal border radius](docs/removal-border-radius.png)
 
-Result: While the mentioned adjustments led to a significant improvement, a slight border artifact still persisted on the initial clicks of each game. Further investigation is required for a complete resolution.
+**Result**: While the mentioned adjustments led to a significant improvement, a slight border artifact still persisted on the initial clicks of each game. Further investigation is required for a complete resolution.
+
+## Deployment
+
+1.GitHub Account: Begin by creating an account on github.com. The platform is free to use.
+
+2.Repository Creation: Create a repository to host your website. Click the "+" button on the main page, then select "New Repository."
+
+3.Repository Details: Provide a name, description, and set it to public.
+
+4.Access Repository Settings: Navigate to the repository settings.
+
+5.GitHub Pages Section: Locate this section within the settings.
+
+6.Branch Selection: Choose the "main" branch for deployment.
+
+7.Save Changes: Save the settings to initiate the deployment process.
+
+8.Deployment in Progress: Wait for the confirmation message indicating successful deployment.
+
+9.Accessing the Live Site: Retrieve the link to your deployed website.
+
+10.Share the Link: Share the provided link with others.
+
+Explore the Deployed Website: Visit the live site by clicking on the following link: <https://afjunior18.github.io/Simpsons-Memory-Game/>

@@ -34,7 +34,7 @@ The Simpsons Memory Game is the result of my second project in the Fullstack Sof
 
     The game provides a "Start/Easy and Start/Hard" button that allows users to instantly initiate a new game, maintaining the flow of gameplay without interruptions.
 
-### Wireframe
+## Wireframe
 
 To plan the game's layout and functionality, I utilized the Balsamiq tool to create a wireframe. This served as a preliminary visual representation.These elements combined to form an engaging and user-friendly game centered around The Simpsons theme.
 

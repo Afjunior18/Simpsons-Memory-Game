@@ -126,6 +126,10 @@ button {
     padding: 3px 5px;
 }
 
+#homeRulesBtnContainer {
+    display: none;
+}
+
 /* Classes to style titles and topics */
 
 .title-rules {

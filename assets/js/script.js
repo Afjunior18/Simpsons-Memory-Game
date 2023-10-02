@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hardButton = document.getElementById('hard-level');
     const footer = document.getElementById('footer');
     const btnRules = document.getElementById('btn-rules');
+    const homeRulesBtnContainer = document.getElementById('homeRulesBtnContainer');
 
     // Create variable for starting a timer 
     let currentTime = 60;
@@ -118,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
      * - Hides win and game over messages.
      * - Hides buttons for game start and difficulty selection.
      * - Hides the footer.
+     * Shows the rules button.
      * - Shuffles the cards and creates the game board.
      * - Resets the game state.
      * - Starts the game timer.
@@ -129,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         runGame.style.display = 'none';
         hardButton.style.display = 'none';
         footer.style.display = 'none';
+        homeRulesBtnContainer.style.display = 'block';
 
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);
@@ -150,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
      * - Hides win and game over messages.
      * - Hides buttons for game start and difficulty selection.
      * - Hides the footer.
+     * - Shows the rules button.
      * - Shuffles the cards and creates the game board.
      * - Resets the game state.
      * - Starts the game timer.
@@ -161,6 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         runGame.style.display = 'none';
         hardButton.style.display = 'none';
         footer.style.display = 'none';
+        homeRulesBtnContainer.style.display = 'block';
 
         if (!gameInProgress) {
             const shuffledCards = shuffleCards(cards);

@@ -2,10 +2,9 @@
 
 The Simpsons Memory Game is the result of my second project in the Fullstack Software Development course. This project showcases my skills in JavaScript and my creativity in bringing the beloved Simpsons universe to life in the form of an engaging memory game.
 
-About the Game:
-The Simpsons Memory Game is a web-based game that challenges players to match pairs of cards featuring iconic characters from the animated series "The Simpsons". With vibrant graphics and engaging gameplay, it offers fans of all ages an entertaining way to test their memory and enjoy the beloved characters.
+**About the Game**: The Simpsons Memory Game is a web-based game that challenges players to match pairs of cards featuring iconic characters from the animated series "The Simpsons". With vibrant graphics and engaging gameplay, it offers fans of all ages an entertaining way to test their memory and enjoy the beloved characters.
 
-Target Audience: Fans of "The Simpsons" Who want to engage with their favorite characters in a new and entertaining way and memory game enthusiasts looking for a themed and visually engaging experience. Players of all ages, from kids to adults, who can appreciate the challenge and fun of a memory game.
+**Target Audience**: Fans of "The Simpsons" Who want to engage with their favorite characters in a new and entertaining way and memory game enthusiasts looking for a themed and visually engaging experience. Players of all ages, from kids to adults, who can appreciate the challenge and fun of a memory game.
 
 ![Responsiveness](docs/responsive-01.png)
 
@@ -19,11 +18,16 @@ Target Audience: Fans of "The Simpsons" Who want to engage with their favorite c
 
 - Easy Game Start: As a new user, I want to be able to start a the game with ease and understand the game's objective right away.
 
-Testing: The game presents a prominent "Start Game" button, providing a straightforward way to initiate gameplay. A brief instruction is also displayed to clarify the objective.![Start Button and Game Objective](docs/ux-07.png)
+**Testing**: The game presents a prominent "Start Game" button, providing a straightforward way to initiate gameplay. A brief instruction is also displayed to clarify the objective.![Start Button and Game Objective](docs/ux-07.png)
+
+- Access to Game Rules: As a New user, I would like to easily locate and understand the rules of the game.
+
+**Testing**: The rules are prominently displayed on the first page, ensuring immediate visibility for users. A button beneath the game board allows easy access back to the rules, providing a convenient reference during gameplay. This design facilitates a smooth and informative user experience.
+![Rules Board](docs/ux-rules.png)
 
 - Choose Your Challenge: As a new user, I want the option to select between different difficulty levels so I can tailor the game to my preference and skill level.
 
-Testing: The game offers two distinct difficulty levels - "Easy" and "Hard". Each level is clearly labeled with an appropriate description to help users make an informed choice. ![Start The Game](docs/ux-01.png)
+**Testing**: The game offers two distinct difficulty levels - "Easy" and "Hard". Each level is clearly labeled with an appropriate description to help users make an informed choice. ![Start The Game](docs/ux-01.png)
 
 ### Returning User
 
@@ -31,7 +35,7 @@ Testing: The game offers two distinct difficulty levels - "Easy" and "Hard". Eac
 
 - Quick Restart: As a returning user, I want the ability to swiftly start a new game without unnecessary steps, providing a good gaming experience.
 
-Testing: The game provides a "Start/Easy and Start/Hard" button that allows users to instantly initiate a new game, maintaining the flow of gameplay without interruptions.![Start a New Game](docs/ux-05.png) ![Start a New Game](docs/ux-06.png).
+**Testing**: The game provides a "Start/Easy and Start/Hard" button that allows users to instantly initiate a new game, maintaining the flow of gameplay without interruptions.![Start a New Game](docs/ux-05.png) ![Start a New Game](docs/ux-06.png).
 
 ## Design Choices
 
@@ -48,9 +52,9 @@ Both styles were sourced from Google Fonts and to ensure they complement each ot
 
 The game, themed around The Simpsons, incorporates vibrant and familiar colors associated with the show. The primary colors used are:
 
-- Yellow (#FFD700): This color represents the iconic skin tone of the Simpson family members.
+- Yellow: This color represents the iconic skin tone of the Simpson family members.
 
-- Blue (#0000FF): This color is synonymous with the animated show's logo and various characters.
+- Blue: This color is synonymous with the animated show's logo and various characters.
 
 These colors were selected to evoke nostalgia and create a visually engaging experience for players, reminiscent of the beloved TV series.
 
@@ -70,43 +74,48 @@ For my game, I selected images that align with The Simpsons theme. These images 
 
 The game layout is designed to provide an intuitive and enjoyable experience for players. It features a game board where users can interact with cards based on The Simpsons characters. The layout includes:
 
-Game Board: This is the main area where players interact with the cards and try to find matching pairs.
+**Game Board**: This is the main area where players interact with the cards and try to find matching pairs.
 ![The Game Board](docs/ux-03.png)
 
-Game Controls: Buttons like "Start/Easy" and "Start/Hard" allow users to initiate and adjust the difficulty level of the game.
+**Game Controls**: Buttons like "Start/Easy" and "Start/Hard" allow users to initiate and adjust the difficulty level of the game.
 ![Start Game](docs/ux-01.png)
 
-Timer and Statistics: The game displays a timer to track the time taken to complete the game, as well as statistics like the number of successful matches and incorrect attempts.
+**Timer and Statistics**: The game displays a timer to track the time taken to complete the game, as well as statistics like the number of successful matches and incorrect attempts.
 ![Timer](docs/ux-02.png)
 
-Messages: Messages like "Game Over" and "You Win" provide feedback to the user based on their performance.
+**Messages Box**: Messages like "Game Over" and "You Win" provide feedback to the user based on their performance.
 ![Game Over Message](docs/ux-08.png) ![Win Message](docs/ux-09.png)
 
 ### Wireframe
 
 To plan the game's layout and functionality, I utilized the Balsamiq tool to create a wireframe. This served as a preliminary visual representation.These elements combined to form an engaging and user-friendly game centered around The Simpsons theme.
+
+**Desktop - Wireframe**
 ![Desktop Wireframe](docs/wireframe-desktop.png)
+
+**Ipad - Wireframe**
 ![Ipad Wireframe](docs/wireframe-ipad.png)
+
+**Mobile - Wireframe**
 ![Mobile Wireframe](docs/wireframe-mobile.png)
 
 ## Features
 
-- Game Board: The central element of the game, where players interact with cards featuring characters from The Simpsons. It provides an engaging experience for users to find matching pairs.
+- **Game Board**: The central element of the game, where players interact with cards featuring characters from The Simpsons. It provides an engaging experience for users to find matching pairs.
 
-- Difficulty Levels: Users can choose between "Easy" and "Hard" levels to adjust the game's challenge, offering options for different player preferences.
+- **Difficulty Levels**: Users can choose between "Easy" and "Hard" levels to adjust the game's challenge, offering options for different player preferences.
 
-- Timer and Statistics:
-A timer keeps track of the time taken to complete the game, providing an additional layer of challenge. Players can also see statistics like the number of successful matches and incorrect attempts.
+- **Timer and Statistics**: A timer keeps track of the time taken to complete the game, providing an additional layer of challenge. Players can also see statistics like the number of successful matches and incorrect attempts.
 
-- Start and Restart Buttons: Buttons like "Start Game" and "Hard Level" allow users to initiate and adjust the difficulty level of the game. Additionally, a "New Match" button enables players to quickly start a new game.
+- **Start and Restart Buttons**: Buttons like "Start Game" and "Hard Level" allow users to initiate and adjust the difficulty level of the game. Additionally, a "New Match" button enables players to quickly start a new game.
 
-- Win and Game Over Messages: Feedback messages notify users of their game outcome, creating a satisfying experience upon winning and providing encouragement after an unsuccessful attempt.
+- **Win and Game Over Messages**: Feedback messages notify users of their game outcome, creating a satisfying experience upon winning and providing encouragement after an unsuccessful attempt.
 
-- Game Controls: Includes buttons for starting the game, selecting difficulty levels, and accessing rules. These controls enhance user interaction and provide options for customization.
+- **Game Controls**: Includes buttons for starting the game, selecting difficulty levels, and accessing rules. These controls enhance user interaction and provide options for customization.
 
-- Responsive Design: The game is designed to be accessible and enjoyable on various devices, including desktops, tablets, and mobile phones. This ensures a seamless experience for all players.
+- **Responsive Design**: The game is designed to be accessible and enjoyable on various devices, including desktops, tablets, and mobile phones. This ensures a seamless experience for all players.
 
-- Favicon: A custom favicon has been added to enhance the user experience. This small but noticeable detail adds a personalized touch to the browser tab. ![Favicon](assets/favicon/favicon-32x32.png)
+- **Favicon**: A custom favicon has been added to enhance the user experience. This small but noticeable detail adds a personalized touch to the browser tab. ![Favicon](assets/favicon/favicon-32x32.png)
 
 ## Technologies Used
 
@@ -118,23 +127,23 @@ A timer keeps track of the time taken to complete the game, providing an additio
 
 ### Frameworks, Libraries, and Programs
 
-- Balsamiq: Used for creating wireframes.
-- GitHub: Used for website deployment.
-- Font Awesome: A library of icons and symbols used for the webpage.
-- Google Fonts: Imported fonts for the website.
+- Balsamiq: Used for creating wireframes.<https://balsamiq.com/>/
+- GitHub: Used for website deployment. <https://github.com/>
+- Font Awesome: A library of icons and symbols used for the webpage. <https://fontawesome.com/>
+- Google Fonts: Imported fonts for the website. <https://fonts.google.com/>
 - Images
-  - Shutterstock
-  - Wallpapers
-  - All-Free-Download
+  - Shutterstock <https://www.shutterstock.com/>
+  - Wallpapers <https://wallpapers.com/simpsons>
+  - All-Free-Download <https://all-free-download.com/free-vector/the-simpsons-images.html>
 - Paint: Used to edit screenshots and convert image extensions for the readme file.
-- Am I Responsive: Used to check how the website responds on various screens.
+- Am I Responsive: Used to check how the website responds on various screens. <https://ui.dev/amiresponsive>
 - Chrome Dev Tools: Frequently used to experiment with code and preview on different screens.
-- TinyPNG: Used for compressing and optimizing images to improve performance.
+- TinyPNG: Used for compressing and optimizing images to improve performance. <https://tinypng.com/>
 - Simple Image Resizer: Used for resizing images. <https://www.simpleimageresizer.com/>
 - Unicorn Revealer: Chrome extension for debugging layout issues and visualizing hidden properties on webpages.
-- Animate.css: Used for animations.
-- W3Schools CSS3 Animations: Used for creating animations, especially for titles.
-- Favicon.io: Used for creating the favicon.
+- Animate.css: Used for animations. <https://animate.style/>
+- W3Schools CSS3 Animations: Used for creating animations, especially for titles. <https://www.w3schools.com/css/css3_animations.asp>
+- Favicon.io: Used for creating the favicon. <https://favicon.io/>
 - Icons: A comprehensive library of icons and symbols. <https://fontawesome.com/>
 
 ### Tutorials and Inspirations
@@ -244,4 +253,4 @@ To the videos that were crucial in completing this project:
 
 - Memory Game Tutorial (Marina Ferreira): This tutorial served as a crucial source of guidance and inspiration throughout the development process. It provided detailed instructions and practical examples that were essential for the successful implementation of the memory game. <https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/>
 
-- A big thanks to my mentor, David Bowers, for his invaluable feedback and guidance. His insights were key in improving the final project.
+- A big thanks to my mentor, [David Bowers](https://github.com/dnlbowers), for his invaluable feedback and guidance. His insights were key in improving the final project.

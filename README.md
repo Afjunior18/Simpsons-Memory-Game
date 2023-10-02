@@ -90,14 +90,11 @@ The game layout is designed to provide an intuitive and enjoyable experience for
 
 To plan the game's layout and functionality, I utilized the Balsamiq tool to create a wireframe. This served as a preliminary visual representation.These elements combined to form an engaging and user-friendly game centered around The Simpsons theme.
 
-**Desktop - Wireframe**
-![Desktop Wireframe](docs/wireframe-desktop.png)
+**Desktop - Wireframe** ![Desktop Wireframe](docs/wireframe-desktop.png)
 
-**Ipad - Wireframe**
-![Ipad Wireframe](docs/wireframe-ipad.png)
+**Ipad - Wireframe** ![Ipad Wireframe](docs/wireframe-ipad.png)
 
-**Mobile - Wireframe**
-![Mobile Wireframe](docs/wireframe-mobile.png)
+**Mobile - Wireframe** ![Mobile Wireframe](docs/wireframe-mobile.png)
 
 ## Features
 
@@ -184,7 +181,7 @@ I used Lighthouse in DevTools to assess and optimize the performance, accessibil
 
 - **Mobile - Index.html**
 
-![Desktop index.html](docs/mobile-performance.png)
+![Mobile index.html](docs/mobile-performance.png)
 
 ### Wave Validation
 
@@ -204,8 +201,7 @@ Description: Styling alert messages proved challenging. The decision was made to
 
 **Resolution**: To fix this, a function was implemented to hide the win message whenever a new game was initiated, regardless of the chosen difficulty level.
 
-- Issue: Border Artifact on Initial Card Click
-Description: When starting the first game and clicking on cards, a minor artifact appeared as a faint black border in the middle of the cards. Various attempts were made to rectify the issue.
+- Issue: Border artifact on initial card click. When starting the first game and clicking on cards, a minor artifact appeared as a faint black border in the middle of the cards. Various attempts were made to rectify the issue.
 ![Black Border](docs/error-click-image.png)
 
 - Attempts:

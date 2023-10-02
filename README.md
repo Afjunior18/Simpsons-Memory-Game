@@ -85,9 +85,9 @@ Messages: Messages like "Game Over" and "You Win" provide feedback to the user b
 ### Wireframe
 
 To plan the game's layout and functionality, I utilized the Balsamiq tool to create a wireframe. This served as a preliminary visual representation.These elements combined to form an engaging and user-friendly game centered around The Simpsons theme.
-![Desktop Wireframe]()
-![Tablet Wireframe]()
-![Mobile Wireframe]()
+![Desktop Wireframe](docs/wireframe-desktop.png)
+![Ipad Wireframe](docs/wireframe-ipad.png)
+![Mobile Wireframe](docs/wireframe-mobile.png)
 
 ## Features
 
@@ -158,6 +158,12 @@ A timer keeps track of the time taken to complete the game, providing an additio
 - <https://jigsaw.w3.org/css-validator/>
 
 ![CSS Validation](docs/validator-css.png)
+
+### JavaScript Validation
+
+- <https://jshint.com/>
+
+![CSS Validation](docs/validator-js.png)
 
 ### Lighthouse tool
 
@@ -230,7 +236,7 @@ Explore the Deployed Website: Visit the live site by clicking on the following l
 
 ## Credits
 
-A big shoutout to the following resources that played a pivotal role in the completion of this project:
+To the videos that were crucial in completing this project:
 
 - Countdown Timer Tutorial: Provided invaluable guidance on implementing the timer/countdown feature. <https://www.youtube.com/watch?v=PIiMSMz7KzM>
 

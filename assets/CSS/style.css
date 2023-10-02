@@ -810,7 +810,7 @@ button {
     }
 }
 
-/* For sreeen sizes from 250px wide and down */
+/* For sreeen sizes from 265px wide and down */
 @media screen and (max-width:265px) {
 
     .card-image {

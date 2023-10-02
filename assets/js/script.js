@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Adding an event listener to the "Home/Rules" button for page refresh
-    btnRules.addEventListener('click', function() {
+    btnRules.addEventListener('click', function () {
         window.location.reload();
     });
 
@@ -218,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
             gameInProgress = false;
 
             gameOverMessage();
-            // removeEventListener.cardElement('click');
         }
     }
 

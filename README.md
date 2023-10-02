@@ -88,7 +88,7 @@ The game layout is designed to provide an intuitive and enjoyable experience for
 
 **Game Board Rules**:The rules are prominently displayed on the first page, ensuring immediate visibility for users. A button beneath the game board allows easy access back to the rules.
 
-![Rules Board](docs/ux-rules.png)  
+![Rules Board](docs/ux-10.png)  
 
 **Game Board**: This is the main area where players interact with the cards and try to find matching pairs.
 
@@ -207,7 +207,7 @@ Verified image and container sizes using the Unicorn Revealer tool, a Google Chr
 
     ![Removal border radius](docs/removal-border-radius.png)
 
-    **Result**: While the mentioned adjustments led to a significant improvement, a slight border artifact still persisted on the initial clicks of each game. Further investigation is required for a complete resolution.
+    **Result**: While the mentioned adjustments led to a significant improvement, a slight border artifact still persisted on the initial clicks of each game. As shown in [Bug Border Artifact 01](docs/error.png) and [Bug Border Artifact 02](docs/error01.png). Further investigation is required for a complete resolution.
 
 ## Deployment
 

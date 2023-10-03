@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('start-game').addEventListener("click", startEasyGame);
     document.getElementById('hard-level').addEventListener("click", startHardGame);
 
-    // Event listeners for starting a new game with selected difficulty level
+    // Event listeners for starting a new game when get a message after game finishs
     document.getElementById('win-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);
     document.getElementById('win-message').querySelectorAll('.btn-message')[1].addEventListener("click", startHardGame);
     document.getElementById('game-over-message').querySelectorAll('.btn-message')[0].addEventListener("click", startEasyGame);

@@ -56,8 +56,6 @@ Body: The font used for the card text is: font-family: 'Noto Sans', sans-serif;
 
 ![Font Body](docs/font-body.png)  
 
-Both styles were sourced from Google Fonts and to ensure they complement each other and enhance the overall visual appeal of the game by using the website <https://www.fontpair.co/all>.
-
 ### Colour Scheme
 
 The game, themed around The Simpsons, incorporates vibrant and familiar colors associated with the show. The primary colors used are:
